@@ -1,0 +1,13 @@
+
+
+{{>~root.btn_text}}
+{{>#parent.parent.data.btn_text}}    访问for循环上一级数据
+{{:#get("array").data.length}}  获取数组长度
+
+#view.data
+#data      用于访问视图的当前数据上下文
+#index     用于返回索引属性
+#parent    返回的是当前视图#view  #parent.data === #view.data === #data
+
+
+
