@@ -1,0 +1,27 @@
+
+
+如果用node4.2运行
+elasticsearch 下面的log.js  65 行要改成如下
+Log.prototype.listenerCount = function (event) {
+  
+if (EventEmitter.prototype.listenerCount) {
+    
+return EventEmitter.prototype.listenerCount.call(this, event);
+  
+}
+ 
+ // compatability for node < 0.10
+  
+if (EventEmitter.listenerCount) {
+    
+return EventEmitter.listenerCount(this, event);
+  
+} else {
+    
+return this.listeners(event).length;
+  
+}
+
+};
+
+

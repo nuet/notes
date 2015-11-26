@@ -1,0 +1,33 @@
+
+
+查看端口是否占用
+netstat -ano|findstr "36081"
+
+查看其他机器端口是否开放(win7后要去系统内开启)
+telnet 124.130.131.94 30082
+
+
+
+
+ERR_EMPTY_   RESPONSE
+ERR_INSECURE_RESPONSE
+
+empty
+insecure
+
+
+Session #17: The remote server (localhost) presented a certificate that did not validate, due to RemoteCertificateNameMismatch, RemoteCertificateChainErrors.
+
+0 - 已处理证书链，但是在不受信任提供程序信任的根证书中终止。
+
+
+SUBJECT: E=testmaila01@sina.com, CN=*.565656.cn, OU=ysh, O=ysh, L=ta, S=sd, C=CN
+ISSUER: E=testmaila01@sina.com, CN=*.565656.cn, OU=ysh, O=ysh, S=sd, C=CN
+EXPIRES: 2015/12/18 14:45:47
+
+(This warning can be disabled by clicking Tools | Fiddler Options.)
+
+
+
+
+

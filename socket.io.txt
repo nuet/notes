@@ -1,0 +1,114 @@
+
+客户端服务器端简单例子
+http://www.nodejs.net/a/20130107/220149.html
+官网教程
+https://github.com/socketio/socket.io
+结合Redis使用
+http://blog.fens.me/tag/socket-io/
+
+参考: http://segmentfault.com/a/1190000000449888
+单点多点推送
+function(req,res){
+    jsonBody(req,res,function(err,data){
+        if(err) {
+            res.statusCode = 400;
+            res.end('Bad request, json body only');
+        }else{
+           if (data.type && data.pointer && data.content) {
+               switch (data.type) {
+                   case 'all' :
+                     io.sockets.send(data.content);
+                     res.end('success');
+                     break;
+                   case 'room' :
+                     io.sockets.in(data.pointer).send(data.content);
+                     res.end('success');
+                     break;
+                   case 'single' :
+                     client.get(data.pointer, function(err,result){
+                         if(result) {
+                             io.sockets.socket(result).send(data.content);
+                             res.end('success');
+                         }
+                     })
+                   default :
+                     res.end('unexpected type');
+                     break;
+               }
+           }else{
+               res.end('Bad request!');
+           }
+        }
+    })
+}
+
+
+向当前客户端发送事件
+socket.emit('login', {numUsers: numUsers });
+
+广播（不包含当前客户端）
+socket.broadcast.emit('new message', {username: socket.username, message: data });
+
+广播（且包含当前客户端）
+io.sockets.emit('message', "this is a test");
+
+在房间广播（不包含当前客户端）
+socket.broadcast.to('game').emit('message', 'nice game');
+
+在房间广播（包含当前客户端）
+io.sockets.in('game').emit('message', 'cool game');
+
+发送给指定客户端
+io.sockets.socket(socketid).emit('message', 'for your eyes only');
+
+
+
+客户端
+var socket = io.connect('http://127.0.0.1:1338/some')
+socket.on('love',function(data){console.log(data);})
+服务器端
+io.of('/some').on('connection',
+
+
+分组数据传输__________________________________________________________
+服务端
+io.sockets.on('connection', function (socket) {
+    socket.on('firefox', function (data) {
+        socket.join('firefox');
+    });
+    socket.on('chrome',function(data){
+        socket.join('chrome');
+    });
+});
+客户端
+socket.emit('firefox')，就可以加入firefox聊天室；
+socket.emit('chrome')， 就可以加入chrome聊天室；
+服务端
+向一个分组传输消息，有两种方式：
+socket.broadcast.to('chrome').emit('event_name', data); //emit to 'room' except this socket client
+io.sockets.in('chrome').emit('event_name', data)        //emit to all socket client in the room
+socket.join() 对应事件是socket.leave()
+一个用户在多个分组
+服务器
+socket.on('subscribe', function(data) { 
+    socket.join(data.room);
+})
+socket.on('unsubscribe', function(data) { 
+    socket.leave(data.room);
+ })
+客户端
+socket = io.connect('http://127.0.0.1:1338/');
+socket.emit('subscribe',{"room" : "chrome"};
+socket.emit('unsubscribe',{"room" : "chrome"};
+
+
+
+
+
+
+
+
+
+
+
+

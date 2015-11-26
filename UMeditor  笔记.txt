@@ -1,0 +1,18 @@
+
+
+
+
+um.addshortcutkey('cleardoc', 'ctrl+13');
+um.addListener('cleardoc',function(){
+    console.log('{autosubmit:"ctrl+13"}');
+    sendClick();
+});
+
+um.addListener("keydown",function(type,event){
+    if(event.ctrlKey && 13===event.keyCode){
+});
+
+
+
+
+

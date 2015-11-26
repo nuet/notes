@@ -1,0 +1,4 @@
+
+查看本机IP
+sudo ifconfig -a
+

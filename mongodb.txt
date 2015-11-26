@@ -1,0 +1,70 @@
+参考:  http://www.cnblogs.com/lsc183/archive/2012/08/16/mongodb.html
+
+创建 D:\run\mongodb\data              #建立数据存放目录
+     D:\run\mongodb\log\mongodb.log   #建立日志文件
+启动服务器
+D:\run\mongodb>mongod.exe --dbpath=d:\run\mongodb\data
+D:\run\mongodb\mongod.exe --dbpath=d:\run\mongodb\data
+
+在浏览器中输入http://localhost:27017/。会出现
+You are trying to access MongoDB on the native driver port. For http diagnostic access, add 1000 to the port number
+表面服务已经启动。
+
+
+另开cmd
+D:\run\mongodb\mongo.exe  #客户端连接服务器
+connecting to:test 表明连接成功
+
+以下对mongodb的一些操作
+D:\run\mongodb\mongo.exe  连接数据库
+show dbs  查看数据库使用情况
+use dbtest  创建数据库或者切换数据库
+db 查看当前数据库
+db.col.insert({"name":"菜鸟教程"})    插入数据
+db.col.find()          查询数据库
+db.col.update({"name":"菜鸟教程"}, {$set:{'name':'更新后数据'}})
+db.dropDatabase()      删除当前数据库
+db.maxnum.update({"num":"0"}, {$set:{'num':'1'}})
+
+每次执行后增一
+db.runCommand(
+   {
+     findAndModify: "maxnum",
+     query: {  },
+     sort: { num: 1 },
+     update: { $inc: { num: 1 } },
+     upsert: true
+   }
+ )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+
+
+
+mongodb服务器
+D:\run\mongodb\mongod.exe --dbpath=d:\run\mongodb\data
+mongodb客户端
+D:\run\mongodb\mongo.exe
+
+
+redis服务器
+d:/run/redis/redis-server.exe d:/run/redis/redis.windows.conf 
+redis客户端
+d:/run/redis/redis-cli.exe -h 127.0.0.1 -p 6379
+
+启用node服务器
+node d:/run/yshim/lib/server.js
+
+PuTTY连接参数
+deployer@124.130.131.94 -p 122
+yshdev321
+
+
+d:\putty\pscp -P 122 -r D:\tmp deployer@124.130.131.94:/home/deployer/cxb  上传目录OK
+d:\putty\pscp -P 122 -r deployer@124.130.131.94:/home/deployer/cxb D:\datatmp\  下载目录OK
+
+
+d:\putty\pscp -P 122 -r D:\run\yshim\ deployer@124.130.131.94:/home/deployer/cxb/yshim  上传目录OK
+d:\putty\pscp -P 122 -r deployer@124.130.131.94:/home/deployer/cxb D:\run\yshim\  下载目录OK
+
+
+
+
+~/node-v0.12.2/bin/node ~/node-v0.12.2/bin/npm install     安装
+~/node-v0.12.2/bin/node ~/cxb/yshim/lib/server.js
+~/node-v0.12.2/bin/node ~/node-v0.12.2/bin/pm2 start app.js
+
+
+
+
+
+
+
+
+

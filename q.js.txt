@@ -1,0 +1,25 @@
+
+参考:  http://blog.csdn.net/shmnh/article/details/43869393
+
+.then(function() {})
+.then(function() {})
+.done()
+
+用done()结束, 如果第一个then返回rejected, 那么第二个then没有调用会抛异常
+没用done()结束, 就不会抛异常
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+
+
+1. 运行winDbu
+2. File->Open Executeable  选择exe文件  按F5运行程序到出错点
+3. Command窗口下面命令行输入 .dump /ma d:\myexe.dmp
+4. 将myexe.dmp拷贝到开发环境,下生成的exe同目录， 直接用VS运行 
+
+以上1,2,3再客户机器上动作, 4在开发机上
+
+
+
+
+
+
+
+

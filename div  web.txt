@@ -1,0 +1,24 @@
+
+
+块标签
+div h1...h6  p ul table hr ul ol
+
+内联元素
+span b td a img  
+
+<ul>
+<li>……</li>
+<li>……</li>
+</ul>
+
+<ol>
+<li>……</li>
+<li>……</li>
+</ol>
+
+<dl>
+<dt>标题</dt>
+<dd>内容1</dd>
+<dd>内容2</dd>
+</dl>
+

@@ -1,0 +1,67 @@
+
+
+使用软件putty.exe
+下载地址
+http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
+
+连接用户名,密码
+ssh deployer@124.130.131.94 -p 122
+yshdev321
+
+cd
+ls 
+cat app.js  查看文件的内容
+mkdir cxb 创建cxb的目录
+cp 复制
+rm app.js 删除文件或者目录
+rm -r test 删除目录
+mv 移动文件 
+# lsb_release -a      查看系统版本号
+ps 查看进程命令
+ps aux # 查看系统所有的进程数据  
+ps ax # 查看不与terminal有关的所有进程  
+ps -lA # 查看系统所有的进程数据  
+ps axjf # 查看连同一部分进程树状态  
+ps -e -f 显示所有进程及完整信息
+top 显示系统当前进程状况
+pgrep -l node 查看关键字进程
+
+ 
+top -p `pgrep node | tr "\\n" "," | sed 's/,$//'`          查看node进程占用资源的情况
+netstat -apn                查看端口占用情况
+netstat -apn | grep node    查看node端口占用情况
+netstat -apn | grep 30082   查看什么程序占用了端口
+ps -aux | grep node  查看程序情况
+
+
+file user.js  判断文件类型
+vim  编辑文件或创建文件
+
+kill -signal PID
+killall 
+
+
+vi 命令
+i  进入编辑
+ESC键退出编辑
+:q 退出
+:wq 保存后退出
+
+
+windows命令行下输入
+D:\PuTTY>pscp D:\test.js  deployer@124.130.131.94:/home/deployer/cxb    绝对目录
+D:\PuTTY>pscp D:\test.js  deployer@124.130.131.94:~/cxb                 相对目录
+
+pscp -r D:\tmp  deployer@124.130.131.94:~/cxb
+
+
+pscp -P 122 -r  D:\tmp  deployer@124.130.131.94:~/cxb/
+
+
+pscp -P 122 -r deployer@124.130.131.94:/home/deployer/cxb D:\datatmp\  下载目录OK
+pscp -P 122 -r D:\tmp deployer@124.130.131.94:/home/deployer/cxb  上传目录OK
+
+
+
+
+

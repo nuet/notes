@@ -1,0 +1,53 @@
+
+
+
+
+node lib/server.js
+
+pm2 start lib/server.js
+
+
+http://127.0.0.1:36082/sendMessage
+
+http://127.0.0.1:36082/resetCounter
+
+http://127.0.0.1:36082/memberList
+
+
+
+GET http://127.0.0.1:36082/sendMessage HTTP/1.1
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Language: zh-Hans-CN,zh-Hans;q=0.5
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240
+Accept-Encoding: gzip, deflate
+Host: 127.0.0.1:36082
+Connection: Keep-Alive
+
+messages={msg:'nihao'}&share=2
+
+
+
+GET http://127.0.0.1:36082/sendMessage?messages={} HTTP/1.1
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Language: zh-Hans-CN,zh-Hans;q=0.5
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240
+Accept-Encoding: gzip, deflate
+Host: 127.0.0.1:36082
+Connection: Keep-Alive
+
+
+GET http://127.0.0.1:36082/sendMessage HTTP/1.1
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Language: zh-Hans-CN,zh-Hans;q=0.5
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240
+Accept-Encoding: gzip, deflate
+Host: 127.0.0.1:36082
+Connection: Keep-Alive
+
+
+
+
+
+
+
+

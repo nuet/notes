@@ -1,0 +1,58 @@
+
+
+windows版下载地址
+https://github.com/MSOpenTech/redis/releases
+github.com
+https://github.com/MSOpenTech/redis
+
+
+建立启动脚本内容如下 startup.bat 
+cd d:/run/redis
+redis-server.exe redis.windows.conf  
+
+
+客户端连上服务器操作
+d:/run/redis/redis-cli.exe -h 127.0.0.1 -p 6379     #连接服务器
+set key AAA   #建立key
+get key
+keys *
+info      #查看服务器信息
+select <dbsize> #选择数据库索引  select 1
+flushall #清空全部数据
+flushdb  #清空当前索引的数据库
+slaveof <服务器> <端口>  #设置为从服务器
+slaveof no one #设置为主服务器
+shutdown  #关闭服务
+
+hincrby 原子增减
+hincrby tb col 8  这个应该是原子操作
+hincrby tb col 2
+hincrby tb col -3
+hgetall tb        获取结果
+
+zadd 将一个或多个 member 元素及其 score 值加入到有序集 key 当中
+zadd zo 1 zo1
+zadd zo 9 zo9
+zadd zo 6 zo6
+zadd zo 2 zo2
+zrange ko 0, -1 withscores  查看排序
+
+
+
+expire user:100000:feed:topic 24*60*60  建立信息超时时间一天
+
+
+ZINTERSTORE out:100000:200000 1 user:100000:follow user:200000:follow
+
+
+
+
+
+
+
+
+
+
+
+
+

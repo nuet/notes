@@ -1,0 +1,32 @@
+
+1.下载:
+wget http://nodejs.org/dist/v0.12.2/node-v0.12.2.tar.gz
+2.解压
+tar zxvf node-v0.12.2.tar.gz
+cd node-v0.12.2
+
+
+
+运行node
+~/node-v0.12.2/bin/node app.js
+
+运行pm2
+~/node-v0.12.2/bin/node ~/node-v0.12.2/bin/pm2 start app.js
+
+~/node-v0.12.2/bin/node ~/node-v0.12.2/bin/pm2 list   查看运行项目
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
