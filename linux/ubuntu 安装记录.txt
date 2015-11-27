@@ -1,0 +1,217 @@
+
+
+解决分辨率只有640*480问题
+vbox->设备->安装增强功能
+sudo apt-get install virtualbox-guest-dkms  (如果上一步还不行,就执行这一步)
+
+安装google拼音输入法
+sudo apt-get install ibus-googlepinyin
+右上角->输入法图标点击->text entry settings->点左边+号->搜索googlepinyin 可以了
+
+
+vbox和ubuntu共享文件
+vbox->设备->共享文件夹(共享好D盘,名称为D_DRIVE)
+下面ubuntu ctrl+alt+t下执行, 要root权限
+sudo -i  切换到root
+mkdir /mnt/shared
+sudo mount -t vboxsf D_DRIVE /mnt/shared
+
+
+升级ubuntu系统软件
+sudo apt-get update
+sudo apt-get dist-upgrade  回车后会更新所有需升级软件
+sudo apt-get install 软件名   升级指定软件
+
+
+切换root用户
+sudo -i
+
+安装chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i ~/google-chrome-stable_current_amd64.deb   这个步骤不知道要不要
+sudo -i
+apt-get -f install  这个要root权限
+su cxb
+sudo dpkg -i ~/google-chrome-stable_current_amd64.deb  这个要在文件目录执行
+
+
+安装atom
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt-get update
+sudo apt-get install atom
+卸载atom
+sudo apt-get remove atom
+sudo add-apt-repository --remove ppa:webupd8team/atom
+卸载atom方法二
+sudo apt-get autoremove atom
+
+
+安装WebStorm
+安装 Oracle JDK
+WebStorm是基于Java的,我们需要安装Oracle JDK的支持,使用如下命令来安装:
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java7-installer
+sudo apt-get install oracle-java7-set-default
+https://www.jetbrains.com/webstorm/download/   下载安装包
+tar xfz ~/下载/WebStorm-11.0.0.tar.gz    如果不行切换到root
+tar xfz ~/Downloads/WebStorm-10.0.4.tar.gz
+sudo mv ~/Downloads/WebStorm-143.381.46 /opt/
+cd /opt/WebStorm-141.1550/
+cd bin/
+sh webstorm.sh
+
+
+安装VSC
+安装Ubuntu Make
+sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
+sudo apt-get update
+sudo apt-get install ubuntu-make
+umake web visual-studio-code   安装vscode
+umake web visual-studio-code --remove   卸载vscode
+
+
+安装eclipse
+sudo apt-get install eclipse-cdt eclipse
+
+安装QQ
+参考: http://jingyan.baidu.com/article/afd8f4de4409ad34e286e9f5.html
+在应用市场安装wine
+在ubuntukylin.com 下载QQ国际版(应用->第三方应用)
+进入解压后目录
+sudo dpkg -i *.deb   执行安装
+sudo apt-get autoremove atom
+sudo apt-get autoremove wine-qqintl:i386  卸载
+
+
+查看nodejs是否安装
+dpkg --get-selections | grep node
+
+卸载nodejs
+sudo apt-get remove --purge nodejs
+
+查看系统是32或64位
+getconf LONG_BIT
+
+查看系统信息
+uname -p
+
+
+安装node.js{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{
+以下编译成功
+参考: http://www.cnblogs.com/cyStyle/p/nodejs.html
+一、确保你的ubuntu安装了依赖包和python，gcc，g++组件以及可选的git组件，部分可能会在更新源中已经安装。如果没有则要重新安装，命令如下：
+$ sudo apt-get install g++ curl libssl-dev apache2-utils
+$ sudo apt-get install python 
+$ sudo apt-get install build-essential 
+$ sudo apt-get install gcc 
+$ sudo apt-get install g++ 
+
+
+wget http://nodejs.org/dist/v0.12.2/node-v0.12.2.tar.gz    下载
+tar -zxf node-v0.12.2.tar.gz    解压
+cd node-v0.12.2
+./configure  编译前 配置 
+make   编译
+sudo make install   安装(如果多个版本, 只需要执行这个命令就可以换版本)
+
+//选择目录安装（将nodejs安装在/usr/local/node目录下）
+$ ./configure –prefix=/usr/local/node 
+$ make 
+$ sudo make install 
+以上能编译安装成功
+
+
+安装node.js}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+NVM安装nodejs{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{
+nvm是nodejs版本管理工具。可以在多个nodejs版本中进行切换，降低了升级nodejs时的成本
+安装nvm 方式一 成功
+apt-get install build-essential libssl-dev
+curl https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh
+source ~/.profile
+
+git方式安装nvm 方式二  成功
+参考: http://jingyan.baidu.com/article/046a7b3edebf38f9c27fa9bc.html
+sudo -i
+cd /home
+git clone https://github.com/creationix/nvm.git
+cd nvm
+./install.sh
+安装之后输入nvm还是提示没有这时候需要直行source ./nvm.sh
+source /root/nvm/nvm.sh     这条是为了开机就能使用nvm
+
+nvm --version
+nvm ls
+nvm ls-remote  查看能安装版本
+nvm install v5.0.0
+nvm install v0.12.2
+nvm use v5.0.0  切换版本
+nvm uninstall v0.12.2
+}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+
+
+
+
+
+
+
+
+
+
+
+安装 mongodb
+参考: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+下面安装指定版本
+sudo apt-get install -y mongodb-org=3.0.7 mongodb-org-server=3.0.7 mongodb-org-shell=3.0.7 mongodb-org-mongos=3.0.7 mongodb-org-tools=3.0.7
+sudo apt-get install -y mongodb-org   安装最新版
+锁定版本, 避免自动升级
+echo "mongodb-org hold" | sudo dpkg --set-selections
+echo "mongodb-org-server hold" | sudo dpkg --set-selections
+echo "mongodb-org-shell hold" | sudo dpkg --set-selections
+echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
+echo "mongodb-org-tools hold" | sudo dpkg --set-selections
+卸载mongodb
+sudo service mongod stop    停止
+sudo apt-get purge mongodb-org*  删除软件包
+sudo rm -r /var/log/mongodb  删除日志文件
+sudo rm -r /var/lib/mongodb  删除数据文件
+---上面就安装好了
+/var/lib/mongodb   默认data和log文件存放位置
+/etc/mongod.conf   这里可以修改
+sudo service mongod start  开启服务器
+sudo service mongod stop  停止服务器
+sudo service mongod restart  重启服务器
+指定目录执行
+/usr/bin/mongod --dbpath ~/mongodb/ --logpath ~/mongodb/mgtest.log --logappend &
+
+
+安装redis
+参考http://blog.csdn.net/leiswpu/article/details/45823549
+下载地址清单: http://download.redis.io/releases/
+wget http://download.redis.io/releases/redis-3.0.5.tar.gz
+tar xvfz redis-3.0.5.tar.gz
+cd redis-3.0.5
+make PREFIX=/usr/local/redis install #安装到指定目录  应该不要下面两步了
+sudo make  编译
+sudo make install  安装
+sudo make test     在安装成功之后，可以运行测试，确认Redis的功能是否正常
+find / -name 'redis*'  根目录查找redis安装到哪里
+/usr/local/redis/bin/redis-server  启动redis
+ps -ef | grep redis   查看Redis进程
+/usr/local/redis/bin/redis-cli 客户端连接服务器
+
+apt-get remove redis 卸载软件
+apt-get remove --purge redis  清除配置
+rm -rf var/lib/redis/
+rm -rf /var/log/redis 
+
+
+
+
+
+
+
+
+
