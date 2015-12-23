@@ -1,5 +1,10 @@
 
 
+D:\run\mongodb\mongod.exe --dbpath=d:\run\mongodb\data
+d:/run/redis/redis-server.exe d:/run/redis/redis.windows.conf 
+node d:/run/yshim/lib/server.js
+node D:\run\CRM_branche\lib/server.js
+
 
 mongodb服务器
 D:\run\mongodb\mongod.exe --dbpath=d:\run\mongodb\data
@@ -26,6 +31,9 @@ d:\putty\pscp -P 122 -r deployer@124.130.131.94:/home/deployer/cxb D:\datatmp\  
 
 d:\putty\pscp -P 122 -r D:\run\yshim\ deployer@124.130.131.94:/home/deployer/cxb/yshim  上传目录OK
 d:\putty\pscp -P 122 -r deployer@124.130.131.94:/home/deployer/cxb D:\run\yshim\  下载目录OK
+
+
+
 
 
 
