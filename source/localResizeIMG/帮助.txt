@@ -1,0 +1,5 @@
+前端本地客户端压缩图片，兼容IOS，Android，PC
+IE9以上及大部分非IE浏览器（chrome、微信什么的）
+https://github.com/think2011/localResizeIMG
+测试地址 http://think2011.net/localResizeIMG/test/
+
