@@ -1,0 +1,22 @@
+
+
+
+构建脚本解决方案  Gulp  Grunt 
+框架 
+React 
+Angular 
+Backbone  适合单页复杂业务逻辑
+	 https://github.com/jashkenas/backbone/
+knockout
+
+iscroll 非常好用的滚动组建
+zepto 小巧的类jquery库
+seajs
+requriejs
+jsreader
+swipe 幻灯片
+moment  日期
+fastclick
+Ionic 
+
+

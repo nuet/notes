@@ -6,6 +6,8 @@ div:eq(index)     选择第几个匹配的子项索引0开始
 div:visible>input 选择可见元素
 div:hidden>input  选择隐藏元素
 
+$.unbind('click', funcName);  删除事件侦听
+
 
 
 
