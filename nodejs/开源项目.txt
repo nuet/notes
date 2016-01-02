@@ -2,5 +2,8 @@
 nwm-windows  node版本管理软件
 https://github.com/coreybutler/nvm-windows/releases
 
+nodist windows下版本管理软件
+https://github.com/marcelklehr/nodist/releases
+
 
 
