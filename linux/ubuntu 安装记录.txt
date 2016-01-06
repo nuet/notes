@@ -4,9 +4,6 @@
 vbox->设备->安装增强功能
 sudo apt-get install virtualbox-guest-dkms  (如果上一步还不行,就执行这一步)
 
-安装google拼音输入法
-sudo apt-get install ibus-googlepinyin
-右上角->输入法图标点击->text entry settings->点左边+号->搜索googlepinyin 可以了
 
 
 vbox和ubuntu共享文件
@@ -17,14 +14,19 @@ mkdir /mnt/shared
 sudo mount -t vboxsf D_DRIVE /mnt/shared
 
 
+
 升级ubuntu系统软件
 sudo apt-get update
 sudo apt-get dist-upgrade  回车后会更新所有需升级软件
 sudo apt-get install 软件名   升级指定软件
 
 
-切换root用户
-sudo -i
+
+安装google拼音输入法
+sudo apt-get install ibus-googlepinyin
+右上角->输入法图标点击->text entry settings->点左边+号->搜索googlepinyin 可以了
+
+
 
 安装chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -33,6 +35,7 @@ sudo -i
 apt-get -f install  这个要root权限
 su cxb
 sudo dpkg -i ~/google-chrome-stable_current_amd64.deb  这个要在文件目录执行
+
 
 
 安装atom
@@ -44,6 +47,17 @@ sudo apt-get remove atom
 sudo add-apt-repository --remove ppa:webupd8team/atom
 卸载atom方法二
 sudo apt-get autoremove atom
+
+
+
+安装VSC
+安装Ubuntu Make
+sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
+sudo apt-get update
+sudo apt-get install ubuntu-make
+umake web visual-studio-code   安装vscode
+umake web visual-studio-code --remove   卸载vscode
+
 
 
 安装WebStorm
@@ -62,17 +76,11 @@ cd bin/
 sh webstorm.sh
 
 
-安装VSC
-安装Ubuntu Make
-sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
-sudo apt-get update
-sudo apt-get install ubuntu-make
-umake web visual-studio-code   安装vscode
-umake web visual-studio-code --remove   卸载vscode
-
 
 安装eclipse
 sudo apt-get install eclipse-cdt eclipse
+
+
 
 安装QQ
 参考: http://jingyan.baidu.com/article/afd8f4de4409ad34e286e9f5.html
@@ -84,45 +92,14 @@ sudo apt-get autoremove atom
 sudo apt-get autoremove wine-qqintl:i386  卸载
 
 
+
 查看nodejs是否安装
 dpkg --get-selections | grep node
 
 卸载nodejs
 sudo apt-get remove --purge nodejs
 
-查看系统是32或64位
-getconf LONG_BIT
 
-查看系统信息
-uname -p
-
-
-安装node.js{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{
-以下编译成功
-参考: http://www.cnblogs.com/cyStyle/p/nodejs.html
-一、确保你的ubuntu安装了依赖包和python，gcc，g++组件以及可选的git组件，部分可能会在更新源中已经安装。如果没有则要重新安装，命令如下：
-$ sudo apt-get install g++ curl libssl-dev apache2-utils
-$ sudo apt-get install python 
-$ sudo apt-get install build-essential 
-$ sudo apt-get install gcc 
-$ sudo apt-get install g++ 
-
-
-wget http://nodejs.org/dist/v0.12.2/node-v0.12.2.tar.gz    下载
-tar -zxf node-v0.12.2.tar.gz    解压
-cd node-v0.12.2
-./configure  编译前 配置 
-make   编译
-sudo make install   安装(如果多个版本, 只需要执行这个命令就可以换版本)
-
-//选择目录安装（将nodejs安装在/usr/local/node目录下）
-$ ./configure –prefix=/usr/local/node 
-$ make 
-$ sudo make install 
-以上能编译安装成功
-
-
-安装node.js}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
 NVM安装nodejs{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{
 nvm是nodejs版本管理工具。可以在多个nodejs版本中进行切换，降低了升级nodejs时的成本
 安装nvm 方式一 成功
@@ -148,14 +125,30 @@ nvm install v0.12.2
 nvm use v5.0.0  切换版本
 nvm uninstall v0.12.2
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+安装node.js{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{
+以下编译成功
+参考: http://www.cnblogs.com/cyStyle/p/nodejs.html
+一、确保你的ubuntu安装了依赖包和python，gcc，g++组件以及可选的git组件，部分可能会在更新源中已经安装。如果没有则要重新安装，命令如下：
+$ sudo apt-get install g++ curl libssl-dev apache2-utils
+$ sudo apt-get install python 
+$ sudo apt-get install build-essential 
+$ sudo apt-get install gcc 
+$ sudo apt-get install g++ 
 
 
+wget http://nodejs.org/dist/v0.12.2/node-v0.12.2.tar.gz    下载
+tar -zxf node-v0.12.2.tar.gz    解压
+cd node-v0.12.2
+./configure  编译前 配置 
+make   编译
+sudo make install   安装(如果多个版本, 只需要执行这个命令就可以换版本)
 
-
-
-
-
-
+//选择目录安装（将nodejs安装在/usr/local/node目录下）
+$ ./configure –prefix=/usr/local/node 
+$ make 
+$ sudo make install 
+以上能编译安装成功
+安装node.js}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
 
 
 
@@ -185,6 +178,7 @@ sudo service mongod stop  停止服务器
 sudo service mongod restart  重启服务器
 指定目录执行
 /usr/bin/mongod --dbpath ~/mongodb/ --logpath ~/mongodb/mgtest.log --logappend &
+
 
 
 安装redis
