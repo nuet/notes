@@ -1,0 +1,57 @@
+
+记录nodejs零基础入门
+
+https://github.com/marcelklehr/nodist/releases
+下载 NodistSetup-v0.7.2.exe
+
+安装成功后， 运行->cmd
+nodist latest 安装最新版nodejs
+node -v 看是否安装成功
+
+
+cd d:\ncms
+npm install koa  创建koa项目
+
+
+npm install -g pm2 安装pm2自动重启(windows下能用不好用)
+pm2 start app.js -i 2   后台运行pm2，启动2个app.js 
+pm2 list  显示所有进程状态
+pm2 delete all          杀死全部进程
+pm2 reload all
+pm2 monit
+
+npm install forever -g    这个windows下可以正常使用
+forever start app.js  
+forever start -w app.js  监听当前文件夹下的所有文件改动 
+forever list 
+forever stopall
+forever stop [id] 
+forever restartall  启动所有 
+// 开发环境下  
+NODE_ENV=development forever start -l forever.log -e err.log -a app.js  
+// 线上环境下  
+NODE_ENV=production forever start -l ~/.forever/forever.log -e ~/.forever/err.log -w -a app.js  
+
+
+创建 test.js 文件内容如下
+ var http = require("http");
+var koa = require('koa');  
+var app = koa();
+
+app.use(function *() {  
+    this.body = 'Hello World';
+});
+
+app.listen(8888);  
+
+node test 启动项目
+浏览器访问 http://127.0.0.1:8888/
+
+
+
+npm install  根据'package.json'安装项目的依赖
+
+
+
+
+
