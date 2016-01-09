@@ -1,0 +1,51 @@
+
+request header
+this.request.header   同headers
+this.request.headers  请求头json对象
+this.request.method=  get post put delete patch
+this.request.length   返回Content-Length数字
+this.request.url=  origin后面的部分， 可以用作url重写
+request.originalUrl  请求的原始网址
+this.request.origin   http://www.ogoodo.com:888
+this.request.href
+this.request.path=
+this.request.querystring=  网址?号后面的部分
+this.request.search=  同querystring多个问号
+this.request.host      "127.0.0.1:888"
+this.request.hostname  "127.0.0.1"
+this.request.type      返回Content-Type项
+this.request.charset
+this.request.query=  请求参数json格式{}
+this.request.fresh 缓存可用返回304  和304相关,看内容是否最新的  缓存有关
+this.request.stale  相反的和fresh
+this.request.protocol
+this.request.secure  相当于 this.protocol == "https"
+this.request.ip
+this.request.ips
+this.request.subdomains
+this.request.is('html')  ???  检测content-type
+this.accepts()
+this.accepts('html'); 判断是否支持'html' 不支持返回false
+this.accepts('text/html', 'json', 'img'...); 同上
+this.acceptsEncodings()
+this.acceptsCharsets();
+this.acceptsLanguages()
+this.request.idempotent
+this.request.socket
+this.request.get(field)
+
+response header操作
+this.set(field, value)
+this.get(field)
+this.response.set(field, value)
+this.append(field, value)
+this.remove(field)
+this.type= 'text/plain; charset=utf-8';
+this.response.lastModified = new Date();
+this.response.etag=
+this.response.length=
+this.response.status=
+this.response.headers 输出回头
+
+response body
+response.body=

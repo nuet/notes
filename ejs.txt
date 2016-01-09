@@ -1,0 +1,43 @@
+
+ <%...%>  js代码
+ <%=输出变量%>
+<%-  输出非转义值
+<%# 备注标签，不执行不输出
+<%% 输出字符'<%'
+-%> 裁剪模式
+<% include user.html %>
+<%- include('user/show', {user: user}) %>
+<%- include(somePath) %>)  可以使用变量
+<%- include('header') -%>  输出非转义符并裁剪
+<%- include('footer') -%>
+
+使用函数
+<% function user(user) { %>  
+  <li><%= user.name %>:<%= user.age %></li>  
+<% } %>
+<ul>  
+  <% users.map(user) %>  
+</ul>  
+
+
+<% users.forEach(function(user){ %>  
+  <li><%= user.name %>:<%= user.age %></li> 
+<% }) %>
+
+自定义 CLOSE TOKEN
+var ejs = require('ejs');  
+ejs.open = '{{';  
+ejs.close = '}}'; 
+
+
+格式化输出
+ejs.filters.last = function(obj) {  
+  return obj[obj.length - 1];  
+};
+<p><%=: users | last %></p> 
+
+
+
+
+
+  
