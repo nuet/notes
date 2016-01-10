@@ -1,4 +1,8 @@
 
+restful
+this.params  参数
+
+
 request header
 this.request.header   同headers
 this.request.headers  请求头json对象
@@ -34,6 +38,10 @@ this.request.idempotent
 this.request.socket
 this.request.get(field)
 
+
+reques body操作
+this.request.body  http传递过来的参数json对象
+
 response header操作
 this.set(field, value)
 this.get(field)
@@ -46,6 +54,7 @@ this.response.etag=
 this.response.length=
 this.response.status=
 this.response.headers 输出回头
+
 
 response body
 response.body=

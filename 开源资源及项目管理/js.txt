@@ -18,5 +18,7 @@ swipe 幻灯片
 moment  日期
 fastclick
 Ionic 
-
+font-awesome  非常不错的图像字体(web用的图标基本上都有)
+http://fontawesome.io/icons/
+http://www.bootcss.com/p/font-awesome/
 

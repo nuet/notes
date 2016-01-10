@@ -1,10 +1,14 @@
 参考:  http://www.cnblogs.com/lsc183/archive/2012/08/16/mongodb.html
 
-创建 D:\run\mongodb\data              #建立数据存放目录
+下载: https://www.mongodb.org/dl/win32/x86_64-2008plus-ssl
+这个解压就能用(安装版,安装后，可以copy出来用)
+
+创建 D:\run\mongodb\data\             #建立数据存放目录
      D:\run\mongodb\log\mongodb.log   #建立日志文件
 启动服务器
 D:\run\mongodb>mongod.exe --dbpath=d:\run\mongodb\data
 D:\run\mongodb\mongod.exe --dbpath=d:\run\mongodb\data
+D:\njs\mongodb\mongod.exe --dbpath=d:\njs\mgdb\data
 
 在浏览器中输入http://localhost:27017/。会出现
 You are trying to access MongoDB on the native driver port. For http diagnostic access, add 1000 to the port number
@@ -13,11 +17,13 @@ You are trying to access MongoDB on the native driver port. For http diagnostic 
 
 另开cmd
 D:\run\mongodb\mongo.exe  #客户端连接服务器
+D:\njs\mongodb\mongo.exe
 connecting to:test 表明连接成功
 
 以下对mongodb的一些操作
 D:\run\mongodb\mongo.exe  连接数据库
 show dbs  查看数据库使用情况
+show collections   查看记录集(表)
 use dbtest  创建数据库或者切换数据库
 db 查看当前数据库
 db.col.insert({"name":"菜鸟教程"})    插入数据

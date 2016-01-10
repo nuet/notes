@@ -1,4 +1,7 @@
 
+Add dynamic include (from variable)
+https://github.com/tj/ejs/issues/93
+
  <%...%>  js代码
  <%=输出变量%>
 <%-  输出非转义值
