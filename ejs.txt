@@ -8,6 +8,7 @@ https://github.com/tj/ejs/issues/93
 <%# 备注标签，不执行不输出
 <%% 输出字符'<%'
 -%> 裁剪模式
+<%_ _%>的控制流使用空白字符移除模式
 <% include user.html %>
 <%- include('user/show', {user: user}) %>
 <%- include(somePath) %>)  可以使用变量

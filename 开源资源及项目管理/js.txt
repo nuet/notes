@@ -22,3 +22,23 @@ font-awesome  非常不错的图像字体(web用的图标基本上都有)
 http://fontawesome.io/icons/
 http://www.bootcss.com/p/font-awesome/
 
+is.js  迷你检查库，这个几乎涵盖了全部的各种检测。
+https://github.com/arasatasaygin/is.js
+
+小清新的通知插件吧，对移动端有好，界面好到爆炸啊。
+https://github.com/jaredreich/notie.js
+
+一键分享到微博、QQ空间、QQ好友、微信、腾讯微博、豆瓣、Facebook、Twitter、Linkedin、Google+、点点等社交网站。
+https://github.com/overtrue/share.js
+http://overtrue.me/share.js/
+
+你想检测用户的设备，试试这个吧，比jq.browser全面多了
+http://matthewhudson.me/projects/device.js/
+http://github.com/matthewhudson/device.js
+
+
+
+
+
+
+
