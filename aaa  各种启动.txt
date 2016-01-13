@@ -1,5 +1,19 @@
 
 
+
+
+
+
+18928492440 已经开试用   手机2016-1-12开了一天试用
+13555555555 电脑不能开， 手机能开
+13691646186
+13651072110 数据异常
+15197853381 2016-1-12 PC开了2天  手机开29 天
+13784111346
+15011551149
+13662207616
+13445545656 跳转到公共客户
+
 D:\run\mongodb\mongod.exe --dbpath=d:\run\mongodb\data
 d:/run/redis/redis-server.exe d:/run/redis/redis.windows.conf 
 node d:/run/yshim/lib/server.js

@@ -1,4 +1,7 @@
 
+如果 a require b  b require c c require a 会出错, 而且不给报错
+
+
 
 一个请求加载多个资源文件
 https://github.com/seajs/seajs-combo/issues/3

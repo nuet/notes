@@ -1,0 +1,10 @@
+﻿﻿打包教程 http://siberiawolf.com/zepto/
+ 1.改make 42行加上需要的模块
+ 2.zepto目录运行 npm install
+ 3.zepto目录运行 npm run-script dist   //这里名称好像一定要是dist
+ 4.dist目录取结果
+
+zepto要包装成CMD模块供seajs引用
+最后要添加module.exports = $;
+
+

@@ -9,7 +9,10 @@ div:hidden>input  选择隐藏元素
 $.unbind('click', funcName);  删除事件侦听
 
 
-
+removeClass
+addClass
+toggleClass
+hasClass
 
 
 
