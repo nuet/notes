@@ -49,6 +49,17 @@ db.runCommand(
 
 
 
+我在koa里面使用的是原生的mongoose.
+
+看mongoose的文档可以知道, Query#exec会返回promise.
+只要返回类型是query的话,就可以执行exec方法, 这样就会返回一个promise. 这样就可以使用yield了
+var user = yield User.findById(“xxxxxxxxxxxxxxxx”).exec()
+
+如果是document, documet#save等方法, 就使用bluebird的promisify方法.
+yield Promise.promisify(user.save, user)()
+
+所以基本上是不需要使用mongoose-q这种库的
+
 
 
 

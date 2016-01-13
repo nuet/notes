@@ -1,7 +1,7 @@
 
 
 {{>~root.btn_text}}
-{{>#parent.parent.data.btn_text}}    访问for循环上一级数据
+{{>#parent.parent.data.btn_text}}    访问for循环上一级数据(data想当然reder传入的)
 {{:#get("array").data.length}}  获取数组长度
 {{!-- ... --}} 注释标签：
 

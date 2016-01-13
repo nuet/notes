@@ -1,0 +1,5 @@
+
+如果 a require b  b require c c require a 会出错, 而且不给报错
+
+
+
