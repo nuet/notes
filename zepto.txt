@@ -8,3 +8,10 @@ zepto要包装成CMD模块供seajs引用
 最后要添加module.exports = $;
 
 
+
+$p.find('.search-input').trigger('focus');  焦点
+$("input[type='radio']:checked").val();   radio 值
+
+
+
+

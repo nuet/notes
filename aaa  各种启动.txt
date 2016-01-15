@@ -1,6 +1,20 @@
 
 
-
+customCount
+recordCount
+user_id
+area_name
+member_type
+pc_status
+_mobile_status
+today_sum
+day_avg
+week_num
+week_avg
+sum_num
+netin_num
+person_tel
+crt_dt
 
 
 
