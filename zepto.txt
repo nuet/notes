@@ -11,7 +11,7 @@ zepto要包装成CMD模块供seajs引用
 
 $p.find('.search-input').trigger('focus');  焦点
 $("input[type='radio']:checked").val();   radio 值
-
+$("input[name='custom_id']:checked").val()
 
 
 
