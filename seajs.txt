@@ -3,3 +3,6 @@
 
 
 
+一个请求加载多个资源文件
+https://github.com/seajs/seajs-combo/issues/3
+
