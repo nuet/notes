@@ -5,8 +5,8 @@
 http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html
 
 连接用户名,密码
-ssh deployer@124.130.131.94 -p 122
-yshdev321
+ssh username@124.130.131.94 -p 122
+password
 
 cd
 ls 

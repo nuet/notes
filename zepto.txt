@@ -13,5 +13,10 @@ $p.find('.search-input').trigger('focus');  焦点
 $("input[type='radio']:checked").val();   radio 值
 $("input[name='custom_id']:checked").val()
 
+$.ajax({
+    url:url,
+    dataType:'jsonp',
+    //jsonpCallback:'callback', //这里不要定义死(让jquery自动生成), 用到全局回掉, 写死有可能造成数据混乱
+
 
 
