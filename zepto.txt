@@ -19,4 +19,8 @@ $.ajax({
     //jsonpCallback:'callback', //这里不要定义死(让jquery自动生成), 用到全局回掉, 写死有可能造成数据混乱
 
 
-
+.keydown(function(event) {
+  if (event.keyCode == "13") {
+    callback(this.value);
+  }
+});

@@ -1,0 +1,41 @@
+
+
+gulp安装指南
+npm install --global gulp  全局安装, 方便执行命令
+npm install --save-dev gulp   项目安装运行插件
+gulpfile.js  建立文件这里放脚本
+gulp  运行gulp
+
+
+gulp 插件
+
+编译Sass (gulp-ruby-sass)
+Autoprefixer (gulp-autoprefixer)
+缩小化(minify)CSS (gulp-minify-css)
+JSHint (gulp-jshint)   //语法检查,拼接及压缩js
+拼接 (gulp-concat)
+丑化(Uglify) (gulp-uglify)
+图片压缩 (gulp-imagemin)
+即时重整(LiveReload) (gulp-livereload)
+清理档案 (gulp-clean)
+图片快取，只有更改过得图片会进行压缩 (gulp-cache)
+更动通知 (gulp-notify)
+执行下列指令来安装这些外挂:
+
+var gulp = require('gulp'),  
+    sass = require('gulp-ruby-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    minifycss = require('gulp-minify-css'),
+    jshint = require('gulp-jshint'),
+    uglify = require('gulp-uglify'),
+    imagemin = require('gulp-imagemin'),
+    rename = require('gulp-rename'),
+    clean = require('gulp-clean'),
+    concat = require('gulp-concat'),
+    notify = require('gulp-notify'),
+    cache = require('gulp-cache'),
+    livereload = require('gulp-livereload');
+
+
+
+
