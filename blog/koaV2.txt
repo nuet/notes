@@ -1,4 +1,9 @@
 
+npm init
+npm install --save koa@next
+npm install --save koa-router@next
+npm install --save koa-bodyparser@3.0.0
+npm install --save koa-serve-static
 
 安装这3个
 //npm install koa 2.0.0-alpha.3
@@ -48,5 +53,14 @@ app.use(ctx => {
 });
 
 app.listen(3000);
+
+// 参考:
+// https://github.com/ckken/KNode/blob/v2/framework/model/init.js
+// https://github.com/base-n/koa-generator-examples
+// http://tonyce.top/ttblog/#569f0749a2f86e3f329b6682
+// https://github.com/Tonyce/Fuck-Experience-API
+
+
+
 
 

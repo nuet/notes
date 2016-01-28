@@ -1,0 +1,53 @@
+
+¹ÙÍø:  https://github.com/queckezz/koa-views
+___________________________________________________________________
+
+const views = require('koa-views');
+const convert = require('koa-convert')
+
+app.use(convert(views('views', {
+  root: __dirname + '/views',
+  default: 'jade'
+})));
+
+___________________________________________________________________
+
+app.use(convert(views('views', {
+  root: __dirname + '/views',
+  default: 'jade'
+})));
+
+app.use(co.wrap(function *(ctx, next){
+  ctx.render = co.wrap(ctx.render);
+  yield next();
+}));
+
+___________________________________________________________________
+const co = require('co');
+const Koa = require('koa');
+const views = require('koa-views');
+const convert = require('koa-convert');
+
+app.use(convert(views('views', {
+  map: {
+    html: 'nunjucks'
+  }
+})));
+app.use(async (ctx, next) => {
+  ctx.render = co.wrap(ctx.render);
+  await next();
+});
+
+
+
+___________________________________________________________________
+
+
+
+
+
+___________________________________________________________________
+
+
+
+
