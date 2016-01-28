@@ -1,6 +1,10 @@
 
+// https://github.com/base-n/koa-generator/
+npm install -g koa-generator   自动生成koa项目
+koa koa2project    生成一个koa v2的项目
+
 restful
-this.params  参数
+this.params  restful参数
 
 
 request header
