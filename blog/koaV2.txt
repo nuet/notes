@@ -1,7 +1,9 @@
 
-// npm init
-// npm install koa@next --save
-
+npm init
+npm install --save koa@next
+npm install --save koa-router@next
+npm install --save koa-bodyparser@3.0.0
+npm install --save koa-serve-static
 
 安装这3个
 //npm install koa 2.0.0-alpha.3
