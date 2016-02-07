@@ -1,0 +1,24 @@
+
+安装
+sudo apt-get update
+sudo apt-get install git
+
+设定
+git config --global user.name "Your Name"
+git config --global user.email "youremail@domain.com"
+git config --global core.editor "editor -w"    设定提交消息用的编辑器(可以不设定)
+git config --global core.editor "gedit -w"     如Vim、Emacs、gedit、subl等(可以不设定)
+
+查看配置信息
+git config --list
+
+克隆项目
+git clone https://github.com/ogoodo/ncms.git 
+
+git commit -a -m "这里是修改消息"     提交修改(本地)
+git push 上传到远程
+
+git pull 同步服务器到本地
+
+
+

@@ -150,7 +150,10 @@ $ sudo make install
 以上能编译安装成功
 安装node.js}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
 
-
+安装 mongodb 容易
+sudo apt-get install mongodb  安装
+sudo service mongodb stop   关闭
+sudo service mongodb start  启动
 
 安装 mongodb
 参考: https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
@@ -178,7 +181,7 @@ sudo service mongod stop  停止服务器
 sudo service mongod restart  重启服务器
 指定目录执行
 /usr/bin/mongod --dbpath ~/mongodb/ --logpath ~/mongodb/mgtest.log --logappend &
-
+mongo  启动客户端
 
 
 安装redis
