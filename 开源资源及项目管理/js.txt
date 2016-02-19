@@ -43,6 +43,34 @@ http://clovisdasilvaneto.github.io/all-animation/
 bootstrap
 http://v3.bootcss.com/examples/theme/#   例子
 
-单页博客
+表情
+http://www.emoji-cheat-sheet.com/
+
+符号
+http://ionicons.com/
+
+多窗口拉动管理
+http://layout.jquery-dev.com/index.cfm
+http://jsfiddle.net/JPEaa/223/
+
+oschina.net使用的编辑器
+http://kindeditor.net/demo.php
+
+
+stackedit PageDown  markDown格式编辑器
+https://github.com/benweet/stackedit
+
+不错的markDown编辑器 oschina开发
+http://git.oschina.net/benhail/thinker-md
+http://thinkermd.oschina.mopaas.com/produce.html
+
+editor.md成熟的markDown编辑器
+https://github.com/pandao/editor.md
+https://pandao.github.io/editor.md/
+
+
+单页博客应用了editor.md
 https://github.com/igordonxiao/inote
+
+
 

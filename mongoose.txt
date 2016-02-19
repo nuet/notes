@@ -1,0 +1,10 @@
+
+
+
+db.users.remove({"name":{ $in: [ "Jack", "Alice" ]}) 
+
+
+
+
+
+
