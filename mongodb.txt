@@ -38,6 +38,7 @@ db.col.insert({"name":"菜鸟教程"})    插入数据
 db.col.find()          查询数据库
 db.col.update({"name":"菜鸟教程"}, {$set:{'name':'更新后数据'}})
 db.dropDatabase()      删除当前数据库
+db.mycollection.drop()   删除集合(表)
 db.maxnum.update({"num":"0"}, {$set:{'num':'1'}})
 
 每次执行后增一

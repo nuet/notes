@@ -1,4 +1,7 @@
 ﻿
+lsb_release -a   查看版本信息
+
+
 查看本机IP
 sudo ifconfig -a
 
@@ -12,3 +15,5 @@ uname -p
 切换root用户
 sudo -i
 
+
+rm -r  删除非空目录

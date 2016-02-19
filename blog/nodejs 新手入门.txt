@@ -13,13 +13,17 @@ cd d:\ncms
 npm install koa  创建koa项目
 
 
+ubuntu使用
 npm install -g pm2 安装pm2自动重启(windows下能用不好用)
 pm2 start app.js -i 2   后台运行pm2，启动2个app.js 
 pm2 list  显示所有进程状态
 pm2 delete all          杀死全部进程
 pm2 reload all
 pm2 monit
+pm2 start app.js --watch
+pm2 start index.js --watch 监听文件夹改变
 
+windows使用
 npm install forever -g    这个windows下可以正常使用
 forever start app.js  
 forever start -w app.js  监听当前文件夹下的所有文件改动 

@@ -1,0 +1,119 @@
+
+
+文本颜色
+text-muted  灰色
+text-warning
+text-error
+text-success
+text-danger
+text-primary
+text-info
+
+对齐
+text-xs-left
+text-xs-right
+text-xs-center
+
+text-lowercase
+text-uppercase
+text-capitalize
+
+font-weight-normal
+font-weight-bold
+font-italic
+
+//背景
+bg-inverse
+bg-faded
+bg-primary
+bg-success
+bg-info
+bg-warning
+bg-dange
+
+m-x-auto  左右 margin auto
+m-a-0  全部 margin 0
+m-t-0  top margin 0
+m-r-0
+m-b-0
+m-l-0
+m-x-0  左右 margin 0
+m-y-0  上下 margin 0
+m-a-1  全部 1rem  参考0
+m-a-2  参考1
+m-a-3  参考1
+
+p-a-0 全部 padding 0
+p-t-0 top padding 0
+p-r-0
+p-b-0
+p-l-0
+p-x-0  左右 padding 0
+p-y-0  上下 padding 0
+p-a-1
+p-a-2
+p-a-3
+
+pos-f-t  固定顶部
+标题
+display-4
+display-3
+display-2
+display-1
+
+lead类使一个段落醒目 
+<p class="lead">
+
+内联样式
+<mark> 标记颜色底色
+<del>  删除线
+<s> 文本不再准确
+<ins>  新添加的文本
+<u> 下划线
+<small> 小号字体
+<strong> 加粗
+<em> 斜体文本
+<b> 高亮词  html5
+<i> 常用于语音、技术术语等等
+
+缩略语  会出现虚线下划线
+<p><abbr title="这里鼠标悬停提示语">attr</abbr></p>
+
+
+引用块  没啥实际下过
+<blockquote><p>这里引用其他文档的内容</p></blockquote>
+
+命名来源  引用其他文档用 footer前会有个横线  cite会出现提示
+.blockquote-reverse  添加这个引用右对齐
+<blockquote class="blockquote">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
+
+
+list-unstyled 去掉列表样式
+list-inline  内联列表，在一行上面显示
+
+水平描述
+.text-truncate  文本太长截断,用...代替
+
+默认媒体
+左边显示图片, 右上显示标题，右下显示描述及其他
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
