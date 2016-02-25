@@ -1,0 +1,6 @@
+
+
+Nginx管理软件
+http://www.zijidelu.org/forum.php
+参考:
+https://cnodejs.org/topic/5059ce39fd37ea6b2f07e1a3

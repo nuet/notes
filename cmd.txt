@@ -7,7 +7,10 @@ netstat -ano|findstr "36081"
 telnet 124.130.131.94 30082
 
 
-
+添加环境变量
+set PATH=%PATH%;C:\Users\xb\AppData\Local\Programs\Git\bin;C:\Users\xb\AppData\Local\Programs\Git\cmd
+显示PATH环境变量
+PATH  回车就会显示(cmd下)
 
 ERR_EMPTY_   RESPONSE
 ERR_INSECURE_RESPONSE

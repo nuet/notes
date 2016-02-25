@@ -7,11 +7,9 @@ node lib/server.js
 pm2 start lib/server.js
 
 
-
-
-
-
-
+npm install bower -g
+bower 要使用git 安装git后， 将下面两个路径放入path环境变量
+C:\Users\xb\AppData\Local\Programs\Git\bin;C:\Users\xb\AppData\Local\Programs\Git\cmd
 
 
 

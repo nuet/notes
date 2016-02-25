@@ -31,7 +31,9 @@ http://my.oschina.net/u/2603233/blog/596584
 
 
 cmd运行
-D:\njs\react\MyProject\node_modules\react-native\packager\packager.sh --nonPersistent
+//D:\njs\react\MyProject\node_modules\react-native\packager\packager.sh --nonPersistent
+cmd运行
+react-native start
 cmd 运行
 react-native run-android
 
