@@ -68,6 +68,8 @@ User.findById(id, function(err, user){
 
 
 
+db.users.remove({"name":{ $in: [ "Jack", "Alice" ]}) 
+
 
 
 
