@@ -36,7 +36,12 @@ apt-get -f install  这个要root权限
 su cxb
 sudo dpkg -i ~/google-chrome-stable_current_amd64.deb  这个要在文件目录执行
 
-
+安装 gedit 
+sudo apt-get update 
+sudo apt-get install gedit-gmate                 
+sudo apt-get install gedit-plugins               
+sudo apt-get remove gedit 
+sudo apt-get install gedit
 
 安装atom
 sudo add-apt-repository ppa:webupd8team/atom
