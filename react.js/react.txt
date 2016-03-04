@@ -1,0 +1,31 @@
+
+
+
+this.props  接收输入数据(从父组件传入) 例:<Child val='这里是传给props的值' />
+this.state 组件保持内部状态数, 当组件的状态数据的变化，展现的标记将被重新调用 render() 更新
+this.setState() 可以改变状态
+this.props.children  任何内嵌的元素会放在这里
+this.props 是不可变的：它们从父节点传递过来，被父节点'拥有'
+this.state 是组件私有的，可以通过调用 this.setState() 来改变它, 当状态更新之后，组件重新渲染自(既会调用render函数)
+getInitialState() 在组件的生命周期中仅执行一次，设置组件的初始化状态(即this.state)
+this.refs.text  引用命名的子组件   组件中命名例子:<input " ref="text" />
+
+this.state  不要使用state构建组建, state仅用于实现交互功能, 应该使用props
+
+
+
+
+
+组件划分原则
+单一功能原: 理想状态下一个组件应该只做一件事，假如它功能逐渐变大就需要被拆分成更小的子组件
+
+
+
+
+
+
+
+
+
+
+
