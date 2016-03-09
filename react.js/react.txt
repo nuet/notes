@@ -11,7 +11,7 @@ getInitialState() 在组件的生命周期中仅执行一次，设置组件的初始化状态(即this.stat
 this.refs.text  引用命名的子组件   组件中命名例子:<input " ref="text" />
 
 this.state  不要使用state构建组建, state仅用于实现交互功能, 应该使用props
-
+PropTypes  用于验证传入组件的 props
 
 
 
@@ -19,6 +19,10 @@ this.state  不要使用state构建组建, state仅用于实现交互功能, 应该使用props
 组件划分原则
 单一功能原: 理想状态下一个组件应该只做一件事，假如它功能逐渐变大就需要被拆分成更小的子组件
 
+
+
+componentWillReceiveProps(object nextProps)：已加载组件收到新的参数时调用
+shouldComponentUpdate(object nextProps, object nextState)：组件判断是否重新渲染时调用
 
 
 
