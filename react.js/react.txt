@@ -25,7 +25,16 @@ componentWillReceiveProps(object nextProps)：已加载组件收到新的参数时调用
 shouldComponentUpdate(object nextProps, object nextState)：组件判断是否重新渲染时调用
 
 
-
+不建议在下述函数中调用setState
+getDefaultProps、
+getInitialState、
+shouldComponentUpdate、
+componentWillUpdate、
+render、
+componentWillUnmount
+不能在下述函数中调用setState(会导致循环调用)
+shouldComponentUpdate、
+componentWillUpdate
 
 
 
