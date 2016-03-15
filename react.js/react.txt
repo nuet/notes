@@ -1,40 +1,101 @@
+﻿
+
+
+this.props  接收输入数据(从父组件传入) 例:<Child val='这里是传给props的值' />
+this.state 组件保持内部状态数, 当组件的状态数据的变化，展现的标记将被重新调用 render() 更新
+this.setState() 可以改变状态
+this.props.children  任何内嵌的元素会放在这里
+this.props 是不可变的：它们从父节点传递过来，被父节点'拥有'
+this.state 是组件私有的，可以通过调用 this.setState() 来改变它, 当状态更新之后，组件重新渲染自(既会调用render函数)
+getInitialState() 在组件的生命周期中仅执行一次，设置组件的初始化状态(即this.state)
+this.refs.text  引用命名的子组件   组件中命名例子:<input " ref="text" />
+
+this.state  不要使用state构建组建, state仅用于实现交互功能, 应该使用props
+PropTypes  用于验证传入组件的 props
 
 
 
-this.props  ������������(�Ӹ��������) ��:<Child val='�����Ǵ���props��ֵ' />
-this.state ��������ڲ�״̬��, �������״̬���ݵı仯��չ�ֵı�ǽ������µ��� render() ����
-this.setState() ���Ըı�״̬
-this.props.children  �κ���Ƕ��Ԫ�ػ��������
-this.props �ǲ��ɱ�ģ����ǴӸ��ڵ㴫�ݹ����������ڵ�'ӵ��'
-this.state �����˽�еģ�����ͨ������ this.setState() ���ı���, ��״̬����֮�����������Ⱦ��(�Ȼ����render����)
-getInitialState() ����������������н�ִ��һ�Σ���������ĳ�ʼ��״̬(��this.state)
-this.refs.text  ���������������   �������������:<input " ref="text" />
 
-this.state  ��Ҫʹ��state�����齨, state������ʵ�ֽ�������, Ӧ��ʹ��props
-PropTypes  ������֤��������� props
+组件划分原则
+单一功能原: 理想状态下一个组件应该只做一件事，假如它功能逐渐变大就需要被拆分成更小的子组件
 
 
 
-
-�������ԭ��
-��һ����ԭ: ����״̬��һ�����Ӧ��ֻ��һ���£������������𽥱�����Ҫ����ֳɸ�С�������
-
+componentWillReceiveProps(object nextProps)：已加载组件收到新的参数时调用
+shouldComponentUpdate(object nextProps, object nextState)：组件判断是否重新渲染时调用
 
 
-componentWillReceiveProps(object nextProps)���Ѽ�������յ��µĲ���ʱ����
-shouldComponentUpdate(object nextProps, object nextState)������ж��Ƿ�������Ⱦʱ����
-
-
-�����������������е���setState
-getDefaultProps��
-getInitialState��
-shouldComponentUpdate��
-componentWillUpdate��
-render��
+不建议在下述函数中调用setState
+getDefaultProps、
+getInitialState、
+shouldComponentUpdate、
+componentWillUpdate、
+render、
 componentWillUnmount
-���������������е���setState(�ᵼ��ѭ������)
-shouldComponentUpdate��
+不能在下述函数中调用setState(会导致循环调用)
+shouldComponentUpdate、
 componentWillUpdate
+
+
+
+
+
+
+dangerouslySetInnerHTML ：提供插入纯 HTML 字符串的功能，主要为了能和生成 DOM 字符串的库整合
+this.key  可选的唯一的标识器。当组件在 渲染 过程中被各种打乱的时候，由于差异检测逻辑，可能会被销毁后重新创建。给组件绑定一个 key，可以持续确保组件还存在 DOM 中
+this.setProps(object nextProps[, function callback])  该方法仅在根组件上面调用
+this.replaceProps(object nextProps[, function callback])
+this.replaceState(object nextState[, function callback])  类似于 setState() ，但是删除之前所有已存在的 state 键
+this.getDefaultProps()   以声明式的方式来定义 props 的默认值(当父级没有传入this.props时,可以保证有默认值)
+this.props.children  父组件设定的当前元件的字组件(待确认是否这样)
+mixins  共用什么周期事件
+        可以当组件销毁时做资源释放,组件可以使用了多个mixin，按mixin引入顺序执行mixin里方法, 最后执行组件内定义的方法
+
+组件是 React 里复用代码最佳方式
+
+var { checked, ...other } = this.props;
+<input type="text" defaultValue="Hello!" />;
+<select defaultValue="C">  不受限组件
+<select value="B">           受限组件
+<select multiple={true} value={['B', 'C']}>
+<input type="radio" name="opt" defaultChecked /> 
+ 设置 <textarea> 值时不应该使用子节点  用value='要输入的值'
+this.refs.myTextInput.getDOMNode().focus();  直接操作DOM
+
+onClickCapture 处理点击事件的 捕获阶段
+onClick        处理点击事件的 冒泡阶段
+
+
+组件生命周期
+• 挂载： 组件被插入到DOM中。
+• 更新： 组件被重新渲染，查明DOM是否应该刷新。
+• 移除： 组件从DOM中移除
+挂载
+getInitialState(): object 在组件被挂载之前调用。状态化的组件应该实现这个方法，返回初始的state数据。
+componentWillMount() 在挂载发生之前立即被调用。
+componentDidMount() 在挂载结束之后马上被调用。需要DOM节点的初始化操作应该放在这里
+更新
+componentWillReceiveProps(object nextProps) 当一个挂载的组件接收到新的props的时候被调用。该方法应该用于比较 this.props 和 nextProps ，然后使用 this.setState() 来改变state。
+shouldComponentUpdate(object nextProps, object nextState): boolean 当组件做出是否要更新DOM的决定的时候被调用。实现该函数，优化 this.props 和 nextProps ，以及 this.state 和 nextState 的比较，如果不需要React更新DOM，则返回false。
+shouldComponentUpdate  这是在重新绘制过程开始之前触发
+componentWillUpdate(object nextProps, object nextState) 在更新发生之前被调用。你可以在这里调用 this.setState() 。
+componentDidUpdate(object prevProps, object prevState) 在更新发生之后调用。
+移除
+componentWillUnmount() 在组件移除和销毁之前被调用。清理工作应该放在这里。
+
+执行顺序
+shouldComponentUpdate -> componentWillUpdate -> componentDidUpdate
+
+节点初次被放入的时候 componentWillReceiveProps 并不会被触发, 原因是因为 componentWillReceiveProps 经常会处理一些和 old props 比较的逻辑，而且会在变化之前执行
+
+this.forceUpdate() 当你知道一些很深的组件state已经改变了的时候，可以在该组件上面调用，而不是使用 this.setState() 。
+                   应该尽量避免所有使用 forceUpdate() 的情况
+immutable-JS 不可变数据
+
+
+
+
+
 
 
 
