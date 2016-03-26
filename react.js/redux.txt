@@ -1,0 +1,61 @@
+
+参考: https://segmentfault.com/a/1190000003503338?_ea=323420
+      https://github.com/lewis617/react-redux-tutorial
+
+
+reducer  处理action然后返回最终的state，然后会根据state调用render, 则更新了界面
+         实际上就是一个函数, 用来执行根据指定 action 来更新 state 的逻辑
+         reducer 不存储 state, reducer 函数逻辑中不应该直接改变 state 对象, 而是返回新的 state 对象
+         reducer是纯函数  参考: https://segmentfault.com/a/1190000004364418
+         纯函数（pure function）可被看成是一个状态机，在任何时候，只要有相同的输入，就会得到相同的输出：
+         一个reducer会产生一个state, combineReducers，把多个reducre进行结合
+action   
+         Action是唯一可以改变状态的途径，包括服务器来的推送以及用户操作，最终都需要转化为一个个Action。
+           这种简单的方式解决了传统应用因为多种方式修改状态，而导致应用出现各种问题
+         Action仅仅是一个纯的JS对象，因此这个动作，可以被记录、序列化、存储以及以后通过一系列的“回放”来调试应用。
+         Action会按着严格的顺序一个个执行，因此应用并不会出现竞态的情况；
+store    根据合并后的reducer创建
+
+store.replaceReducer用于替换创建store的reducer，比如从页面A跳转到页面B后，仅仅需要替换reducer就可以让B页面使用所需的状态，在按需加载状态时候非常有用  参考: https://segmentfault.com/a/1190000004463851
+
+store 是一个单一对象：
+管理应用的 state
+  通过 store.getState() 可以获取 state
+  通过 store.dispatch(action) 来触发 state 更新
+  通过 store.subscribe(listener) 来注册 state 变化监听器
+  通过 createStore(reducer, [initialState]) 创建
+
+state 是在 reducer 里面维护的。所以，state 的划分存储依赖于 reducer 的划分
+数据请求一般放在 action 中
+
+参考: https://segmentfault.com/a/1190000004355491
+mapStateToProps    的作用是声明，当state树变化的时候，哪些属性是我们关心的
+mapDispatchToProps 的作用是把store中的dispatch方法注入给组件
+  这两个函数其实就是写入属性到父传给子的props中, 然后子就可以通过props获取到
+
+
+var action1 = { type: 'add' };
+store.dispatch(action1);   改变store的方法, 触发action
+dispatch(action) 是一个同步的过程：执行 reducer 更新 state -> 调用 store 的监听处理函数
+
+//store里面的数据发生改变时，触发的回调函数
+store.subscribe(function () {
+  console.log('the year is: ', store.getState().year);
+});
+
+
+Provider 仅仅起到获得store，然后将其传递给子孙元素而已
+React通过Context属性，可以将属性(props)直接给子孙component，无须通过props层层传递
+connect 后的组建
+  1.通过this.context获取祖先Component的store
+  2.props包括stateProps、dispatchProps、parentProps,合并在一起得到nextState，作为props传给真正的Component
+  3.componentDidMount时，添加事件this.store.subscribe(this.handleChange)，实现页面交互
+  4.shouldComponentUpdate时判断是否有避免进行渲染，提升页面性能，并得到nextState
+  5.componentWillUnmount时移除注册的事件this.handleChange
+
+
+简单谈谈redux、react-router的理解：
+1. 首先redux是实现state的管理，Provider的作用只是定义context，子孙组件想获取context的内容，需要将组件包括在connect里面，也就是需要定义container
+2. react-router是实现路由管理，作用就是实现URL与UI保持一致，所以需要提供history与routes信息，然后react-router根据不同url，匹配不同component，最后进行渲染，react-router并不管到底是什么component
+
+

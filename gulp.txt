@@ -37,5 +37,11 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload');
 
 
+gulp 拷贝文件时如何移除文件目录结构
+var rename = require('gulp-rename');
+参考: http://sunxboy.iteye.com/blog/2177530
+
+
+
 
 
