@@ -54,6 +54,13 @@ connect 后的组建
   5.componentWillUnmount时移除注册的事件this.handleChange
 
 
+
+
+如何理解redux的重点就在于，redux如何处理整个数据流的走向。基本的思路如下：
+component --dispatch(action)--> reducer --update(state)--> store --update(props)--> component
+
+
+
 简单谈谈redux、react-router的理解：
 1. 首先redux是实现state的管理，Provider的作用只是定义context，子孙组件想获取context的内容，需要将组件包括在connect里面，也就是需要定义container
 2. react-router是实现路由管理，作用就是实现URL与UI保持一致，所以需要提供history与routes信息，然后react-router根据不同url，匹配不同component，最后进行渲染，react-router并不管到底是什么component
