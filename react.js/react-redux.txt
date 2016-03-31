@@ -1,5 +1,7 @@
 
 http://www.jianshu.com/p/3334467e4b32
+https://github.com/xgrommx/awesome-redux
+
 
 
 
