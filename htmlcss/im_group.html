@@ -1,0 +1,134 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>用户登录</title>
+</head>
+<style type="text/css">
+        #header {
+            background: blue;
+            height: 100px;
+            width: 100%;
+            position:relative; /*父div的位置设置成相对的*/
+        }
+        #h_menu {
+            width:100%;
+            height:50px;
+            background:yellow;
+            /*而子div的位置设置成绝对的，并且下边缘设为0*/
+            position:absolute;
+            bottom:0;
+        }
+        .im_g_cont{
+            height: 100%;
+            width: 100%;
+            background: burlywood;
+            position:relative; /*父div的位置设置成相对的*/
+        }
+        .im_g_left {
+            width: 100px;
+            background: red;
+            float: left;
+            height:100%;
+            top: 100px;
+            bottom:50px;
+        }
+        .im_g_right {
+            height:100%;
+            background: pink;
+    	      margin-left: 102px;
+        }
+        .im_g_title {
+            height:100px;
+            background: skyblue;
+        }
+        .im_g_body {
+            background: green;
+            top: 100px;
+            bottom: 0px;
+            left: 100px;
+            right: 0px;
+            position: absolute;
+            overflow: hidden;
+        }
+        .im_g_chat {
+            background: #5C54CA;
+            position: absolute;
+            left: 0px;
+            right: 200px;
+            height: 100%;
+        }
+
+        .im_g_members {
+            float: right;
+            height: 100%;
+            width:200px;
+            background: blue;
+        }
+        .im_g_history{
+          position: absolute;
+          top: 0px;
+          bottom: 190px;
+          width: 100%;
+          background: #AA0000;
+        }
+        .im_g_font{
+          position: absolute;
+          height: 20px;
+          bottom: 170px;
+          width: 100%;
+          background: #00AA00;
+        }
+        .im_g_content{
+          position: absolute;
+          height: 150px;
+          bottom: 20px;
+          width: 100%;
+          background: #0000AA;
+        }
+        .im_g_send{
+          position: absolute;
+          height: 20px;
+          bottom: 0px;
+          width: 100%;
+          background: #00AAAA;
+        }
+        .im_g_sreach{
+          height: 20px;
+          background: #880000;
+        }
+        .im_g_list{
+          position: absolute;
+          top: 20px;
+          bottom: 0px;
+          width: 200;
+          background: #008800;
+        }
+    </style>
+
+<body>
+
+
+<div class="im_g_cont">
+    <div class="im_g_left">
+        左
+    </div>
+    <div class="im_g_right">
+			<div class="im_g_title">右title</div>
+			<div class="im_g_body">
+				<div class="im_g_chat">
+					<div class="im_g_history">右history</div>
+					<div class="im_g_font">右font</div>
+					<div class="im_g_content">右content</div>
+					<div class="im_g_send">右bottom</div><!-- -->im_g_chat
+				</div>
+				<div class="im_g_members">
+					<div class="im_g_sreach">搜索群成员</div>
+					<div class="im_g_list">群成员列表</div><!---->im_g_members
+				</div>
+			</div>
+    </div>
+</div>
+
+</body>
+
+</html>

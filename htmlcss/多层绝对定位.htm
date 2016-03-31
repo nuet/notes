@@ -1,0 +1,59 @@
+﻿<style type="text/css">
+#main{
+  position:relative;
+  width:660px;
+  height: 400px;
+  margin:0 auto;
+  color:#000;
+  background:#c00;
+  text-align:left;
+  border:1px solid #008000;
+}
+#mid{
+  position:absolute;
+  left: 20px;
+  top: 20px;
+  right:20px;
+  bottom: 20px;
+  background:#c0b;
+  border:1px solid #008000;
+}
+#ccc{
+  position:static;<!--定位元素忽略 其他都可以定位-->
+  left: 20px;
+  top: 20px;
+  right:20px;
+  bottom: 20px;
+  background:#cb0;
+  border:1px solid #008000;
+}
+#ddd{
+  position:inherit;<!--父继承,相当如:static-->
+  left: 20px;
+  top: 20px;
+  right:20px;
+  bottom: 20px;
+  background:#b0c;
+  border:1px solid #000080;
+}
+#hydl{
+  position:absolute;
+  left: 20px;
+  top: 20px;
+  width: 200px;
+  height: 50px;
+  background:#eee;
+}
+p{background:#000;color:#fff;}
+</style>
+<p> 参考: http://www.cnblogs.com/lxblog/p/3152897.html</p>
+<div id="main">a
+    <div id='mid'>b
+        <div id='ccc'>c
+            <div id='ddd'>d
+                <div id="hydl">用 absolute 来绝对定位，相对于 main 块来定位。</div>
+            </div>
+        </div>
+    </div>
+</div>
+<p>Hello World!</p>
