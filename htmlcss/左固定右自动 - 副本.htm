@@ -1,0 +1,67 @@
+﻿<html>
+<head>
+  <meta charset="UTF-8">
+  <title>用户登录</title>
+</head>
+<style type="text/css">
+.g_box{
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background: #993254;
+}
+#im_g_box{
+  height: 100%;
+  width: 100%;
+  background: burlywood;
+  position:relative;
+}
+#im_g_box .left {
+  width: 150px;
+  background: red;
+  float: left;
+  height:100%;
+  position:relative;
+}
+#im_g_box .left .ui {
+  left: 0px;
+  right: 3px;
+  height:100%;
+  position: absolute;
+  background: #e3ee3d;
+}
+#im_g_box .left a {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 3px;
+  height: 100%;
+  background: #e3eefd;
+  cursor: col-resize;
+  border-left: 1px #a0a0a0 solid;
+}
+#im_g_box .right {
+  height:100%;
+  background: pink;
+  margin-left: 150px;
+}
+</style>
+
+<body>
+
+
+<div class="g_box">
+  <div id="im_g_box">
+      <div class="left">
+    			<ui  class="ui">
+    			</ui>
+    			<a class='left_slider_bar'></a>
+      </div>
+      <div class="right">右</div>
+  </div>
+</div>
+
+</body>
+
+</html>
