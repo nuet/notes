@@ -162,6 +162,7 @@ $ sudo make install
 安装node.js}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
 
 安装 mongodb 容易
+sudo apt-get update
 sudo apt-get install mongodb  安装
 sudo service mongodb stop   关闭
 sudo service mongodb start  启动

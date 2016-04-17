@@ -1,5 +1,20 @@
 
 
+
+安装 git
+sudo apt-get update
+sudo apt-get install git
+
+
+
+自动挂载硬盘
+https://help.aliyun.com/knowledge_detail/5974183.html?spm=5176.788314854.2.4.0mV5OZ
+https://help.aliyun.com/knowledge_detail/5974183.html?spm=5176.788314854.2.4.RTUHBZ
+
+sudo fdisk -l 查看硬盘信息
+sudo  mount  ntfs   /dev/xvdb   /mnt/xvdb  挂在硬盘
+sudo umount sdb  卸载
+
 git方式安装nvm 方式二  成功 这个装了麻烦
 参考: http://jingyan.baidu.com/article/046a7b3edebf38f9c27fa9bc.html
 sudo -i     重要--- 要切换到这里
@@ -19,15 +34,40 @@ nvm use v5.0.0  切换版本
 nvm uninstall v0.12.2
 
 
+安装mongodb
+参考: http://www.cnblogs.com/zhoujinyi/archive/2013/06/02/3113868.html
+http://www.mongodb.org/downloads  可以查看下载文件地址
+cd /home/mongodb
+wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1404-3.2.5.tgz  下载
+tar zxvf mongodb-linux-x86_64-ubuntu1404-3.2.5.tgz      解压
+把这些文件做成软连接到/usr/bin 目录下
+ln -s /home/mongodb/mongodb-linux-x86_64-ubuntu1404-3.2.5/bin/bsondump /usr/bin/bsondump
+ln -s /home/mongodb/mongodb-linux-x86_64-ubuntu1404-3.2.5/bin/mongo /usr/bin/mongo
+ln -s /home/mongodb/mongodb-linux-x86_64-ubuntu1404-3.2.5/bin/mongod /usr/bin/mongod
+ln -s /home/mongodb/mongodb-linux-x86_64-ubuntu1404-3.2.5/bin/mongodump /usr/bin/mongodump
+ln -s /home/mongodb/mongodb-linux-x86_64-ubuntu1404-3.2.5/bin/mongoexport /usr/bin/mongoexport
+ln -s /home/mongodb/mongodb-linux-x86_64-ubuntu1404-3.2.5/bin/mongofiles /usr/bin/mongofiles
+ln -s /home/mongodb/mongodb-linux-x86_64-ubuntu1404-3.2.5/bin/mongoimport /usr/bin/mongoimport
+ln -s /home/mongodb/mongodb-linux-x86_64-ubuntu1404-3.2.5/bin/mongooplog /usr/bin/mongooplog
+ln -s /home/mongodb/mongodb-linux-x86_64-ubuntu1404-3.2.5/bin/mongoperf /usr/bin/mongoperf
+ln -s /home/mongodb/mongodb-linux-x86_64-ubuntu1404-3.2.5/bin/mongorestore /usr/bin/mongorestore
+ln -s /home/mongodb/mongodb-linux-x86_64-ubuntu1404-3.2.5/bin/mongos /usr/bin/mongos
+ln -s /home/mongodb/mongodb-linux-x86_64-ubuntu1404-3.2.5/bin/mongosniff /usr/bin/mongosniff
+ln -s /home/mongodb/mongodb-linux-x86_64-ubuntu1404-3.2.5/bin/mongostat /usr/bin/mongostat
+ln -s /home/mongodb/mongodb-linux-x86_64-ubuntu1404-3.2.5/bin/mongostop /usr/bin/mongostop
+创建文件目录以及帐号
+useradd mongodb
+mkdir -p /home/mongodb/data/lib
+mkdir -p /home/mongodb/data/log
+chown -R mongodb:mongodb /home/mongodb/data/lib
+chown -R mongodb:mongodb /home/mongodb/data/log
+启动mongodb（一）:指定参数
+mongod --dbpath /home/mongodb/data/lib/ --logpath=/home/mongodb/data/log/mongodb.log & 
+新建配置文件
+/home/mongodb/mongodb.conf
+指定配置文件启动
+mongod -f /home/mongodb/mongodb.conf
 
-安装 mongodb 容易
-sudo apt-get install mongodb  安装
-sudo service mongodb stop   关闭
-sudo service mongodb start  启动
-
-cd /home
-mkdir data
-mongod --dbpath /home/data         在指定目录启动数据库
 
   备份数据库test的数据到/home/backup/目录
 mongodump -h 127.0.0.1:27017 -d test -o /home/backup/
@@ -38,7 +78,7 @@ mongorestore -h 127.0.0.1:27017 -d ncms  --directoryperdb /home/backup/test
 
 安装pm2   ubuntu使用
 npm install -g pm2 安装pm2自动重启(windows下能用不好用)
-pm2 start /home/ncms/index.js -i 2   后台运行pm2，启动2个app.js 
+pm2 start /home/njs/ncms/index.js -i 2   后台运行pm2，启动2个app.js 
 pm2 list  显示所有进程状态
 pm2 delete all          杀死全部进程
 pm2 reload all
@@ -48,6 +88,26 @@ pm2 start index.js --watch 监听文件夹改变
 
 
 node /home/ncms/index.js -i 2 
+
+
+
+
+
+
+
+
+安装 mongodb 容易
+sudo apt-get install mongodb  安装
+sudo service mongodb stop   关闭
+sudo service mongodb start  启动
+卸载安装
+sudo apt-get --purge remove mongodb mongodb-clients mongodb-server mongodb-dev mongodb-10gen
+sudo apt-get autoremove
+
+cd /home
+mkdir data
+mongod --dbpath /home/data --logpath      在指定目录启动数据库
+mongod --dbpath /home/data --logpath /home/data/db.log --logappend &
 
 
 
