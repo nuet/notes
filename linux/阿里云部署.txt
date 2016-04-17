@@ -1,0 +1,53 @@
+
+
+git方式安装nvm 方式二  成功 这个装了麻烦
+参考: http://jingyan.baidu.com/article/046a7b3edebf38f9c27fa9bc.html
+sudo -i     重要--- 要切换到这里
+cd /home
+git clone https://github.com/creationix/nvm.git
+cd nvm
+./install.sh
+安装之后输入nvm还是提示没有这时候需要直行source ./nvm.sh
+source /root/nvm/nvm.sh     这条是为了开机就能使用nvm
+
+nvm --version
+nvm ls
+nvm ls-remote  查看能安装版本
+nvm install v5.0.0
+nvm install v0.12.2
+nvm use v5.0.0  切换版本
+nvm uninstall v0.12.2
+
+
+
+安装 mongodb 容易
+sudo apt-get install mongodb  安装
+sudo service mongodb stop   关闭
+sudo service mongodb start  启动
+
+cd /home
+mkdir data
+mongod --dbpath /home/data         在指定目录启动数据库
+
+  备份数据库test的数据到/home/backup/目录
+mongodump -h 127.0.0.1:27017 -d test -o /home/backup/
+  还原数据ncms从备份的目录/home/backup/test
+mongorestore -h 127.0.0.1:27017 -d ncms  --directoryperdb /home/backup/test
+--drop：恢复的时候，先删除当前数据，然后恢复备份的数据。就是说，恢复后，备份后添加修改的数据都会被删除，慎用哦
+
+
+安装pm2   ubuntu使用
+npm install -g pm2 安装pm2自动重启(windows下能用不好用)
+pm2 start /home/ncms/index.js -i 2   后台运行pm2，启动2个app.js 
+pm2 list  显示所有进程状态
+pm2 delete all          杀死全部进程
+pm2 reload all
+pm2 monit
+pm2 start app.js --watch
+pm2 start index.js --watch 监听文件夹改变
+
+
+node /home/ncms/index.js -i 2 
+
+
+
