@@ -62,7 +62,7 @@ mkdir -p /home/mongodb/data/log
 chown -R mongodb:mongodb /home/mongodb/data/lib
 chown -R mongodb:mongodb /home/mongodb/data/log
 启动mongodb（一）:指定参数
-mongod --dbpath /home/mongodb/data/lib/ --logpath=/home/mongodb/data/log/mongodb.log & 
+mongod --dbpath /home/mongodb/data/lib/ --logpath=/home/mongodb/data/log/mongodb.log  --fork & 
 新建配置文件
 /home/mongodb/mongodb.conf
 指定配置文件启动
@@ -70,9 +70,9 @@ mongod -f /home/mongodb/mongodb.conf
 
 
   备份数据库test的数据到/home/backup/目录
-mongodump -h 127.0.0.1:27017 -d test -o /home/backup/
+mongodump -h 127.0.0.1:27017 -d ncms -o /home/backup/
   还原数据ncms从备份的目录/home/backup/test
-mongorestore -h 127.0.0.1:27017 -d ncms  --directoryperdb /home/backup/test
+mongorestore -h 127.0.0.1:27017 -d ncms_test --dir /home/backup/ncms
 --drop：恢复的时候，先删除当前数据，然后恢复备份的数据。就是说，恢复后，备份后添加修改的数据都会被删除，慎用哦
 
 
