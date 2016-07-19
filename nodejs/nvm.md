@@ -12,7 +12,7 @@ export NVM_DIR="$HOME/.nvm"
 
 避免每次用nvm use 设定版本
 nvm alias default stable
-å
+
 用国内地址安装
 NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node nvm install 4.4.7
 

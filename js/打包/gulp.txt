@@ -1,0 +1,75 @@
+
+
+gulp安装指南
+npm install --global gulp  全局安装, 方便执行命令
+npm install --save-dev gulp   项目安装运行插件
+gulpfile.js  建立文件这里放脚本
+gulp  运行gulp
+
+
+gulp 插件
+
+编译Sass (gulp-ruby-sass)
+Autoprefixer (gulp-autoprefixer)
+缩小化(minify)CSS (gulp-minify-css)
+JSHint (gulp-jshint)   //语法检查,拼接及压缩js
+拼接 (gulp-concat)
+丑化(Uglify) (gulp-uglify)
+图片压缩 (gulp-imagemin)
+即时重整(LiveReload) (gulp-livereload)
+清理档案 (gulp-clean)
+图片快取，只有更改过得图片会进行压缩 (gulp-cache)
+更动通知 (gulp-notify)
+
+
+
+del     清除文件
+gulp-clean      清除文件
+gulp-concat     用来做文件合并
+gulp-minify-css 是css的压缩工具。
+gulp-uglify 是js的压缩工具
+gulp-usemin 用来处理文件合并或者文件路径修改后，html中的引入问题，实际使用时需要通过在html中增加注释的方式来实现替换。
+gulp-replace    是一个文本修改插件
+gulp-rev和gulp-rev-collector，并没有用到，这里只做标示。这两个插件可以用来处理文件名，同时生成一个json文件保存修改前的文件名和修改后的文件名，并且自动处理文件中的修改，例如图片文件至于css文件。
+gulp-minify-html  html文件压缩。
+del = require('del'),                   // 删除插件
+rev = require('gulp-rev'),              // 给文件增加md5后缀
+revCollector = require('gulp-rev-collector'),// 根据rev替换文件名
+htmlmin = require('gulp-htmlmin'),      // html压缩
+uglify = require('gulp-uglify'),        // js混淆压缩
+csso = require('gulp-csso'),            // 压缩Css
+cache = require('gulp-cache'),          // 缓存插件，使图片仅更新缓存中不一样的图片
+imagemin = require('gulp-imagemin'),    // 压缩图片
+runSequence = require('run-sequence');  // 改变任务优先级
+// 上传到ftp服务器
+require('gulp-upyun').upyunSrc;   //获源
+require('gulp-upyun').upyunDest; //上传
+require('gulp-upyun').upyunRimraf; //删除
+
+
+
+执行下列指令来安装这些外挂:
+
+var gulp = require('gulp'),  
+    sass = require('gulp-ruby-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    minifycss = require('gulp-minify-css'),
+    jshint = require('gulp-jshint'),
+    uglify = require('gulp-uglify'),
+    imagemin = require('gulp-imagemin'),
+    rename = require('gulp-rename'),
+    clean = require('gulp-clean'),
+    concat = require('gulp-concat'),
+    notify = require('gulp-notify'),
+    cache = require('gulp-cache'),
+    livereload = require('gulp-livereload');
+
+
+gulp 拷贝文件时如何移除文件目录结构
+var rename = require('gulp-rename');
+参考: http://sunxboy.iteye.com/blog/2177530
+
+
+
+
+
