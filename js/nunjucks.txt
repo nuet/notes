@@ -2,7 +2,7 @@
 https://mozilla.github.io/nunjucks/cn/templating.html
 https://mozilla.github.io/nunjucks/cn/getting-started.html
 
-²Ã¼ô
+è£å‰ª
 {{ message|shorten(20) }}
 
 

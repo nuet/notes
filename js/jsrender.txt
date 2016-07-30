@@ -1,15 +1,15 @@
 
 
 {{>~root.btn_text}}
-{{>#parent.parent.data.btn_text}}    ·ÃÎÊforÑ­»·ÉÏÒ»¼¶Êı¾İ(dataÏëµ±È»reder´«ÈëµÄ)
-{{:#get("array").data.length}}  »ñÈ¡Êı×é³¤¶È
-{{!-- ... --}} ×¢ÊÍ±êÇ©£º
+{{>#parent.parent.data.btn_text}}    è®¿é—®forå¾ªç¯ä¸Šä¸€çº§æ•°æ®(dataæƒ³å½“ç„¶rederä¼ å…¥çš„)
+{{:#get("array").data.length}}  è·å–æ•°ç»„é•¿åº¦
+{{!-- ... --}} æ³¨é‡Šæ ‡ç­¾ï¼š
 
 
 #view.data
-#data      ÓÃÓÚ·ÃÎÊÊÓÍ¼µÄµ±Ç°Êı¾İÉÏÏÂÎÄ
-#index     ÓÃÓÚ·µ»ØË÷ÒıÊôĞÔ
-#parent    ·µ»ØµÄÊÇµ±Ç°ÊÓÍ¼#view  #parent.data === #view.data === #data
+#data      ç”¨äºè®¿é—®è§†å›¾çš„å½“å‰æ•°æ®ä¸Šä¸‹æ–‡
+#index     ç”¨äºè¿”å›ç´¢å¼•å±æ€§
+#parent    è¿”å›çš„æ˜¯å½“å‰è§†å›¾#view  #parent.data === #view.data === #data
 
 
 

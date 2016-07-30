@@ -2,20 +2,20 @@
 Add dynamic include (from variable)
 https://github.com/tj/ejs/issues/93
 
- <%...%>  js´úÂë
- <%=Êä³ö±äÁ¿%>
-<%-  Êä³ö·Ç×ªÒåÖµ
-<%# ±¸×¢±êÇ©£¬²»Ö´ĞĞ²»Êä³ö
-<%% Êä³ö×Ö·û'<%'
--%> ²Ã¼ôÄ£Ê½
-<%_ _%>µÄ¿ØÖÆÁ÷Ê¹ÓÃ¿Õ°××Ö·ûÒÆ³ıÄ£Ê½
+ <%...%>  jsä»£ç 
+ <%=è¾“å‡ºå˜é‡%>
+<%-  è¾“å‡ºéè½¬ä¹‰å€¼
+<%# å¤‡æ³¨æ ‡ç­¾ï¼Œä¸æ‰§è¡Œä¸è¾“å‡º
+<%% è¾“å‡ºå­—ç¬¦'<%'
+-%> è£å‰ªæ¨¡å¼
+<%_ _%>çš„æ§åˆ¶æµä½¿ç”¨ç©ºç™½å­—ç¬¦ç§»é™¤æ¨¡å¼
 <% include user.html %>
 <%- include('user/show', {user: user}) %>
-<%- include(somePath) %>)  ¿ÉÒÔÊ¹ÓÃ±äÁ¿
-<%- include('header') -%>  Êä³ö·Ç×ªÒå·û²¢²Ã¼ô
+<%- include(somePath) %>)  å¯ä»¥ä½¿ç”¨å˜é‡
+<%- include('header') -%>  è¾“å‡ºéè½¬ä¹‰ç¬¦å¹¶è£å‰ª
 <%- include('footer') -%>
 
-Ê¹ÓÃº¯Êı
+ä½¿ç”¨å‡½æ•°
 <% function user(user) { %>  
   <li><%= user.name %>:<%= user.age %></li>  
 <% } %>
@@ -28,13 +28,13 @@ https://github.com/tj/ejs/issues/93
   <li><%= user.name %>:<%= user.age %></li> 
 <% }) %>
 
-×Ô¶¨Òå CLOSE TOKEN
+è‡ªå®šä¹‰ CLOSE TOKEN
 var ejs = require('ejs');  
 ejs.open = '{{';  
 ejs.close = '}}'; 
 
 
-¸ñÊ½»¯Êä³ö
+æ ¼å¼åŒ–è¾“å‡º
 ejs.filters.last = function(obj) {  
   return obj[obj.length - 1];  
 };

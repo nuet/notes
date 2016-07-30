@@ -1,8 +1,8 @@
 
-Èç¹û a require b  b require c c require a »á³ö´í, ¶øÇÒ²»¸ø±¨´í
+å¦‚æœ a require b  b require c c require a ä¼šå‡ºé”™, è€Œä¸”ä¸ç»™æŠ¥é”™
 
 
 
-Ò»¸öÇëÇó¼ÓÔØ¶à¸ö×ÊÔ´ÎÄ¼ş
+ä¸€ä¸ªè¯·æ±‚åŠ è½½å¤šä¸ªèµ„æºæ–‡ä»¶
 https://github.com/seajs/seajs-combo/issues/3
 

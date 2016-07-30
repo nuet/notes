@@ -1,12 +1,12 @@
 
-²Î¿¼:  http://blog.csdn.net/shmnh/article/details/43869393
+å‚è€ƒ:  http://blog.csdn.net/shmnh/article/details/43869393
 
 .then(function() {})
 .then(function() {})
 .done()
 
-ÓÃdone()½áÊø, Èç¹ûµÚÒ»¸öthen·µ»Ørejected, ÄÇÃ´µÚ¶ş¸öthenÃ»ÓĞµ÷ÓÃ»áÅ×Òì³£
-Ã»ÓÃdone()½áÊø, ¾Í²»»áÅ×Òì³£
+ç”¨done()ç»“æŸ, å¦‚æœç¬¬ä¸€ä¸ªthenè¿”å›rejected, é‚£ä¹ˆç¬¬äºŒä¸ªthenæ²¡æœ‰è°ƒç”¨ä¼šæŠ›å¼‚å¸¸
+æ²¡ç”¨done()ç»“æŸ, å°±ä¸ä¼šæŠ›å¼‚å¸¸
 
  
 

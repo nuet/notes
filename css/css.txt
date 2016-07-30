@@ -46,3 +46,21 @@ input {
     -o-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+
+// 可以高效阻止元素的JavaScript事件行为（包含click和addEventListener)
+.disabled {
+pointer-events:none;
+}
+
+// 原生class操作方法 Chrome、IE10+、Firefox
+document.createElement("p").classList
+{
+length : 0,
+add : function add() { [native code] } ,
+contains : function contains() { [native code] } ,
+item : function item() { [native code] } ,
+remove : function remove() { [native code] } ,
+toString : function toString() { [native code] } ,
+toggle : function toggle() { [native code] }
+}

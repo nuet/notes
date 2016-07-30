@@ -4,7 +4,7 @@
 [阿里ant.design]
 (http://ant.design/)
 
-[uxco阿里巴巴信息平台]
+[uxco阿里巴巴信息平台IE8+]
 (http://uxco.re/components/tinymce/)(这个不错表格强大)[github]
 (https://github.com/uxcore/uxcore)[教程]
 (https://segmentfault.com/blog/uxcore)

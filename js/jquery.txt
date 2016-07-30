@@ -2,11 +2,11 @@
 
 
 
-div:eq(index)     Ñ¡ÔñµÚ¼¸¸öÆ¥ÅäµÄ×ÓÏîË÷Òı0¿ªÊ¼
-div:visible>input Ñ¡Ôñ¿É¼ûÔªËØ
-div:hidden>input  Ñ¡ÔñÒş²ØÔªËØ
+div:eq(index)     é€‰æ‹©ç¬¬å‡ ä¸ªåŒ¹é…çš„å­é¡¹ç´¢å¼•0å¼€å§‹
+div:visible>input é€‰æ‹©å¯è§å…ƒç´ 
+div:hidden>input  é€‰æ‹©éšè—å…ƒç´ 
 
-$.unbind('click', funcName);  É¾³ıÊÂ¼şÕìÌı
+$.unbind('click', funcName);  åˆ é™¤äº‹ä»¶ä¾¦å¬
 
 
 removeClass
