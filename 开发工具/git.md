@@ -28,7 +28,7 @@ git rm —cached filename 删除暂存，不删除文件
 git rm log/\*.log 删除log目录下扩展名为.log的文件
 git rm \*~ 删除当前目录及子目录中所有～结尾的文件
 
-git mv file_from file_to
+git mv file_from file_to  移动文件
 
 git log 查看提交日志
 git log --pretty=oneline  查看提交纪录，
@@ -44,11 +44,3 @@ git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/ogoodo/url.git
 git push -u origin master
-
-
-
-
-
-
-
-

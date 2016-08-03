@@ -40,3 +40,6 @@
 
 [es6]
 (http://es6.ruanyifeng.com/#docs/intro) (讲得很详细node,mocha怎么用都有讲)
+
+[eslint.cn]
+(http://eslint.cn/docs/rules/)(整理得不错)
