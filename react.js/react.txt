@@ -58,7 +58,7 @@ var { checked, ...other } = this.props;
 <select defaultValue="C">  不受限组件
 <select value="B">           受限组件
 <select multiple={true} value={['B', 'C']}>
-<input type="radio" name="opt" defaultChecked /> 
+<input type="radio" name="opt" defaultChecked />
  设置 <textarea> 值时不应该使用子节点  用value='要输入的值'
 this.refs.myTextInput.getDOMNode().focus();  直接操作DOM
 
@@ -91,15 +91,3 @@ shouldComponentUpdate -> componentWillUpdate -> componentDidUpdate
 this.forceUpdate() 当你知道一些很深的组件state已经改变了的时候，可以在该组件上面调用，而不是使用 this.setState() 。
                    应该尽量避免所有使用 forceUpdate() 的情况
 immutable-JS 不可变数据
-
-
-
-
-
-
-
-
-
-
-
-
