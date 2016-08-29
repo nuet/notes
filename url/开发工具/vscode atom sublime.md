@@ -4,6 +4,11 @@
 [vscode安装插件]
 (http://www.zhihu.com/question/35806712)(在VSCode中按下F1，输入 ext install：)
 
+[](https://segmentfault.com/a/1190000006509116)
+
+[vscode]
+(https://segmentfault.com/bookmark/1230000004952367)(系列文章)
+
 [Atom-JavaScript语法校验]
 (https://segmentfault.com/a/1190000004818718)(eslint)
 [Sublime Text 3 配置react语法校验]

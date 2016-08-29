@@ -35,3 +35,6 @@
 
 [React + Redux 入坑指南]
 (https://yq.aliyun.com/articles/58700)(这里有个数据流，的流程图画的还不错)
+
+[自定义 Redux 中的 combineReducers]
+(https://segmentfault.com/a/1190000006667043) (动态加载reducer可以参考到***)
