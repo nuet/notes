@@ -37,6 +37,9 @@ git log --pretty=oneline  filename
 git show 查看文件具体修改内容
 git show f006660f4412c79a86c9a9a9e89dda9a51b4742e(提交hash值)
 
+分支操作
+
+
 
 create a new repository on the command line
 git init

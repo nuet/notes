@@ -43,3 +43,8 @@
 
 [eslint.cn]
 (http://eslint.cn/docs/rules/)(整理得不错)
+
+[usejsdoc.org]
+(http://usejsdoc.org)
+[JSDoc中文文档]
+(http://www.css88.com/doc/jsdoc/)
