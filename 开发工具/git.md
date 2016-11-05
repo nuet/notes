@@ -39,6 +39,9 @@ git show f006660f4412c79a86c9a9a9e89dda9a51b4742e(提交hash值)
 
 分支操作
 
+撤销上次提交到github的记录
+1. git reset --hard HEAD~1
+2. git push -f origin
 
 
 create a new repository on the command line
