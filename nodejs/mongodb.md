@@ -1,4 +1,11 @@
 
+[官网安装教程]
+(https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/#install-mongodb-community-edition-manually)
+
+curl -O https://fastdl.mongodb.org/osx/mongodb-osx-x86_64-3.2.10.tgz  下载
+tar -zxvf mongodb-osx-x86_64-3.2.10.tgz  解压
+mkdir -p mongodb   新建目录
+cp -R -n mongodb-osx-x86_64-3.2.10/ mongodb  复制
 
 下载mongodb 这个网址找地址  https://www.mongodb.com/download-center#community
 curl https://fastdl.mongodb.org/osx/mongodb-osx-ssl-x86_64-3.2.7.tgz > mongodb3.2.7.tgz
@@ -21,5 +28,5 @@ Applications/mongodb/bin
 用配置文件启动
 mongo —config ~/github/mongod.ncms.conf
 
-
-
+启动mongodb服务 mac(解压了就可以直接使用 dbpath指定数据存储的位置)
+sudo ~/db/mongodb3.2.7/bin/mongod --dbpath ~/db/data/ncms

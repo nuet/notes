@@ -62,29 +62,3 @@ var user = yield User.findById(“xxxxxxxxxxxxxxxx”).exec()
 yield Promise.promisify(user.save, user)()
 
 所以基本上是不需要使用mongoose-q这种库的
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
