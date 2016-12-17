@@ -13,3 +13,6 @@
 (https://segmentfault.com/a/1190000005349520)
 [超小Web手势库AlloyFinger原理]
 (https://segmentfault.com/a/1190000007448808)
+
+[推荐轻量高效无依赖的开源JS插件和库]
+(https://segmentfault.com/a/1190000007656902)(有些库还不错)
