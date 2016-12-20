@@ -2,8 +2,9 @@ nvm
 
 注意 nvm install 6.2.2 不要带v不然不行
 
+帮助: https://github.com/creationix/nvm/blob/master/README.markdown
 1.
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.2/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
 2.新建文件
 touch ~/.bash_profile
 3.下面内容放入.bash_profile 最底下
