@@ -7,7 +7,8 @@ nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
 2.新建文件
 touch ~/.bash_profile
-3.下面内容放入.bash_profile 最底下
+3. vi .bash_profile  esc键后wq保存
+4.下面内容放入.bash_profile 最底下
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
