@@ -1,5 +1,11 @@
 mac git
 
+
+### 设置一次， 不如缓存大小不够提交不了
+git config --global http.postBuffer 524288000
+git config --global http.postBuffer 1048576000
+
+
 git clone https://github.com/ogoodo/ncms.git
 git clone https://github.com/ogoodo/ncms.git  new name
 
