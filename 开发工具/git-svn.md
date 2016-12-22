@@ -2,7 +2,7 @@
 
 http://blog.chinaunix.net/uid-11639156-id-3077471.html
 
-注意装了git直接用 giv svn 不是 git－svn
+注意装了git(xcode)直接用 giv svn 不是 git－svn
 
 下面是一个git-svn的一般使用流程：
 1 git svn clone svn_repository   检出一个已存在svn repository(类似于svn checkout)
