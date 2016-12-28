@@ -13,7 +13,7 @@ sudo npm install -g cordova
 sudo npm update cordova -g
 
 cordova更新完成后，还需要更新项目（比如更新ios项目）：
-cordova platform update ios
+cordova platform update ios     这步好像出错
 
 测试下Cordova是否安装成功
 cordova -v
