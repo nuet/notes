@@ -10,3 +10,7 @@
 双击下载的证书->安装->双击安装好的证书->始终信任证书
 2. Charles->选择Structure->右键有锁图标的https项->Enable SSL Proxying->再次访问https链接->
 如果锁没有了说明可以解析了
+
+
+这个快乐平安抓不了包试试
+https://github.com/levyitay/AddSecurityExceptionAndroid

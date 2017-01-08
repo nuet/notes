@@ -5,6 +5,21 @@ mac git
 git config --global http.postBuffer 524288000
 git config --global http.postBuffer 1048576000
 
+### 错误:  error: RPC failed; curl 56 SSLRead() return error -9806s
+brew remove git
+brew remove curl
+brew install openssl
+brew install --with-openssl curl
+brew install --with-brewed-curl --with-brewed-openssl git
+
+## 大文件操作
+brew install git-lfs
+git lfs install
+git lfs track "*****.zip"
+git add file.zip  以后就恶意按正常提交大文件了
+git commit -m "Add design file"
+git push origin master
+
 
 git clone https://github.com/ogoodo/ncms.git
 git clone https://github.com/ogoodo/ncms.git  new name

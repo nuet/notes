@@ -2,6 +2,10 @@
 [使用Swift在iOS中微信分享功能的实现]
 (https://www.tianmaying.com/tutorial/wechat-demo)
 
+## 有用
+[UIStoryboard：和枚举、协议扩展、泛型一起使用更安全]
+(https://segmentfault.com/a/1190000007014293)[github]
+(https://github.com/andyyhope/Blog_UIStoryboardSafety)
 
 ## 下面的可以学习
 [swift UI专项训练43 Swift实现APP引导页]
@@ -16,3 +20,6 @@
 [用 SwiftyDB 管理 SQLite 数据库]
 (http://swift.gg/2016/05/17/swiftydb/)[github]
 (https://github.com/appcoda/SwiftyDB-Demo)
+
+[swift各种view跳转]
+(https://makeapppie.com/tag/uinavigationcontroller-in-swift/)

@@ -1,13 +1,13 @@
 
+windowså®‰è£…æ•™ç¨‹
 
+è§£å‹ android-studio-ide-143.2602393-windows (2.0 Beta 4)
 
-½âÑ¹ android-studio-ide-143.2602393-windows (2.0 Beta 4)
-
-È¥binÄ¿Â¼ÔËĞĞ studio64.exe
+å»binç›®å½•è¿è¡Œ studio64.exe
 
 Tool->andriod->SDK Manage
-  1. SDK Platforms °²×°ÏàÓ¦µÄ°æ±¾
-  2. SDK Tools °²×°
+  1. SDK Platforms å®‰è£…ç›¸åº”çš„ç‰ˆæœ¬
+  2. SDK Tools å®‰è£…
       Android SDK Build Tools
       Android SDK Platform-Tools 23.1
       Android Support Library
@@ -17,25 +17,22 @@ Tool->andriod->SDK Manage
 
 
 C:\Users\xb\AppData\Local\Android\Sdk\extras\intel\Hardware_Accelerated_Execution_Manager
-°²×° intelhaxm-android.exe
+å®‰è£… intelhaxm-android.exe
 
 
-Ìí¼Ó»·¾³±äÁ¿  ¿ØÖÆÃæ°å\ËùÓĞ¿ØÖÆÃæ°åÏî\ÏµÍ³ ->¸ß¼¶ÏµÍ³ÉèÖÃ
+æ·»åŠ ç¯å¢ƒå˜é‡  æ§åˆ¶é¢æ¿\æ‰€æœ‰æ§åˆ¶é¢æ¿é¡¹\ç³»ç»Ÿ ->é«˜çº§ç³»ç»Ÿè®¾ç½®
 ANDROID_HOME  C:\Users\xb\AppData\Local\Android\Sdk
 ANDROID_HOME=C:\Users\xb\AppData\Local\Android\Sdk\tools;C:\Users\xb\AppData\Local\Android\Sdk\platform-tools
 
-°²×°½Ì³Ì
+å®‰è£…æ•™ç¨‹
 http://facebook.github.io/react-native/docs/android-setup.html
 http://bbs.reactnative.cn/topic/10/%E5%9C%A8windows%E4%B8%8B%E6%90%AD%E5%BB%BAreact-native-android%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83
 http://my.oschina.net/u/2603233/blog/596584
 
 
-cmdÔËĞĞ
+cmdè¿è¡Œ
 //D:\njs\react\MyProject\node_modules\react-native\packager\packager.sh --nonPersistent
-cmdÔËĞĞ
+cmdè¿è¡Œ
 react-native start
-cmd ÔËĞĞ
+cmd è¿è¡Œ
 react-native run-android
-
-
-
