@@ -54,3 +54,7 @@ Reveal
 传送门：http://revealapp.com/
 iOS开发调试利器：Reveal
 一句话：很NB！！！
+
+handbrake
+传送门：https://handbrake.fr/?article=download
+视频处理压缩软件, 开源

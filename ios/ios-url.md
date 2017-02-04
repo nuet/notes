@@ -23,3 +23,21 @@
 
 [swift各种view跳转]
 (https://makeapppie.com/tag/uinavigationcontroller-in-swift/)
+
+[moya]
+(https://github.com/Moya/Moya)(一套网络库,封装自Alamofire )[用 RxSwift + Moya 写出优雅的网络请求代码]
+(http://liuduo.me/2016/07/24/rxswiftmoyanetwork/)
+
+[ShareSDK For iOS ]
+(http://wiki.mob.com/%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90%E6%8C%87%E5%8D%97/)(可以分享到微博,微信,qq空间,朋友圈等)
+
+[ swift3.0集成友盟分享sdk_6.0.3（一）]
+(http://blog.csdn.net/callzjy/article/details/53299298)(可以分享到微博,微信,qq空间,朋友圈等有几十个之多)
+
+[UINavigationController视图控制器切换（二）]
+(http://blog.csdn.net/lwjok2007/article/details/48347811)(简单的讲了跨页面跳转等)
+[Swift 设置navigation左右两侧按钮]
+(http://blog.csdn.net/lwjok2007/article/details/48375717)(包括使用系统图标和用户自定义图标)
+
+[Swift UITabBarController 标签栏控制器]
+(http://blog.csdn.net/lwjok2007/article/details/48442339)(用代码进行控制,还有讲到代理和小红点)
