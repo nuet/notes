@@ -58,3 +58,7 @@ iOS开发调试利器：Reveal
 handbrake
 传送门：https://handbrake.fr/?article=download
 视频处理压缩软件, 开源
+
+textmate
+传送门: https://github.com/textmate/textmate/releases
+开源免费的文本编辑器
