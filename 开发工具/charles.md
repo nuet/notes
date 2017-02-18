@@ -14,3 +14,6 @@
 
 这个快乐平安抓不了包试试
 https://github.com/levyitay/AddSecurityExceptionAndroid
+
+如果某些包抓不了, 比如快乐平安登录验证的心跳包
+可以选择->"Disable SSL Proxying"  这样就能顺利的抓其他包
