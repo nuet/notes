@@ -24,3 +24,6 @@ npm install gulp
 
 安装cnpm
  npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+// 查看某个包的版本, 可以看服务器上的
+npm show extract-text-webpack-plugin versions
