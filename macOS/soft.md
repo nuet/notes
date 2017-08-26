@@ -66,3 +66,7 @@ handbrake
 textmate
 传送门: https://github.com/textmate/textmate/releases
 开源免费的文本编辑器
+
+RedisDesktopManager
+https://github.com/uglide/RedisDesktopManager/releases/
+redis图像客户端
